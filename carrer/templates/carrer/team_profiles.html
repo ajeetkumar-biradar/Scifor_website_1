@@ -1,0 +1,592 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Profiles</title>
+    <style>
+
+        .team-profile-wrapper {
+  background-size: cover;
+  background-color: rgb(41, 39, 39);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .team-profile-wrapper {
+    background-size: 18rem !important;
+  }
+  .team-profile-wrapper {
+    padding-bottom: 0rem;
+  }
+}
+
+@media (max-width: 1410px) {
+  .team-profile-wrapper {
+    background-size: 26rem;
+  }
+}
+
+/* Whole Teams profile section */
+
+.team-profiles-section {
+  position: relative;
+  padding: 3rem 15px;
+  text-align: center;
+}
+
+.team-profile-main-heading {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 6rem;
+}
+
+/* Whole Teams profile section Media Query*/
+
+@media screen and (max-width: 768px) {
+  .team-profile-main-heading {
+    font-size: 4rem !important;
+    text-decoration: wavy;
+    animation: fadeIn 1s;
+  }
+}
+@media screen and (max-width: 1410px) {
+  .team-profile-main-heading {
+    font-size: 5rem ;
+    text-decoration: wavy;
+    animation: fadeIn 1s;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Profile Container Or main list of each profile card */
+
+.team-list {
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+  gap: 3rem;
+  width: 90vw;
+  align-self: center;
+}
+.see-more-btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, rgb(32, 30, 30),rgb(41, 39, 39));
+  height: 4rem;
+}
+.see-more-btn{
+  height: 2.5rem;
+  margin-top: 10px;
+  width: 7rem;
+  background-color: transparent;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .team-list {
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 0rem !important;
+    height: 78rem;
+    overflow: hidden;
+  }
+  .team-list-height{
+    display: grid;
+  margin: auto;
+  grid-template-columns: repeat(1, 1fr) !important;
+  gap: 3rem;
+  width: 90vw;
+  align-self: center;
+  height: auto;
+}
+}
+@media (min-width: 750px) {
+  .see-more-btn{
+    visibility: hidden;
+  }
+
+}
+
+
+@media (max-width: 1410px) {
+  .team-list {
+    gap: 1rem;
+  }
+
+}
+
+
+
+
+        .profile-card-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .profile-card {
+            width: 23rem;
+            height: 24rem;
+            background-color: rgba(41, 39, 39, 0.902);
+            background-size: cover;
+            position: relative;
+            cursor: pointer;
+            border: 5px solid rgb(25, 27, 27);
+            z-index: 1;
+            margin-top: 80px;
+            transition: all 0.5s ease-in-out;
+            box-shadow: 0px 0px 20px 2px rgb(25, 27, 27);
+        }
+
+        .profile-card:hover {
+            height: 24rem;
+            width: 23rem;
+            border-radius: 15%;
+            border: 10px solid rgb(0, 204, 255);
+        }
+
+        @media only screen and (max-width: 768px) {
+            .profile-card {
+                width: 85%;
+                height: 22rem;
+                background-color: rgba(41, 39, 39, 0.902);
+                border: 5px solid rgb(25, 27, 27);
+                z-index: 1;
+                margin-top: 50px !important;
+            }
+
+            .profile-card:active {
+                height: 22rem;
+                width: 85%;
+                border-radius: 15%;
+                border: 10px solid rgb(0, 204, 255);
+            }
+        }
+
+        .profile-image-container {
+            height: 18.5rem;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0rem;
+            z-index: 4;
+            transition: all 0.5s ease;
+        }
+
+        .profile-image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .profile-card:hover .profile-image-container {
+            border-radius: 15%;
+            width: 80%;
+            height: 17rem;
+            top: -7rem;
+            left: 10%;
+        }
+
+        .profile-card:hover .profile-image {
+            border-radius: 15%;
+        }
+
+        @media (max-width: 768px) {
+            .profile-card:active .profile-image-container {
+                border-radius: 50% !important;
+                width: 60% !important;
+                height: 12rem !important;
+                top: -3rem !important;
+                left: 20% !important;
+            }
+
+            .profile-card:active .profile-image {
+                height: 12rem !important;
+                border-radius: 50% !important;
+            }
+        }
+
+        @media (max-width: 1420px) {
+            .profile-card:hover .profile-image-container {
+                width: 80%;
+                height: 14.5rem;
+                top: -5rem;
+                left: 10%;
+            }
+
+            .profile-card:hover .profile-image {
+                height: 14.5rem;
+            }
+
+            .profile-image {
+                height: 16rem;
+                width: 100%;
+            }
+        }
+
+        .profile-name-container {
+            background-color: rgba(41, 39, 39, 0.902);
+            background-size: cover;
+            width: 100%;
+            height: 6rem;
+            text-align: center;
+            color: hsl(0, 0%, 98%);
+            z-index: 3;
+            position: absolute;
+            top: 77%;
+            transition: all 0.5s ease;
+        }
+
+        .profile-card:hover .profile-name-container {
+            top: 48%;
+            height: 5.2rem;
+            box-shadow: 0px 0px 15px 2px black;
+            color: #000000;
+            background-color: rgba(0, 204, 255, 0.897);
+        }
+
+        .profile-name {
+            font-size: 1.5vw;
+            margin-top: 10px;
+        }
+
+        .profile-role {
+            font-size: 1vw;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-card:active .profile-name-container {
+                top: 50% !important;
+                height: 4rem;
+                box-shadow: 0px 0px 15px 2px black;
+                color: #000000;
+                background-color: rgba(0, 204, 255, 0.897);
+            }
+
+            .profile-name-container {
+                width: 100%;
+                height: 5rem;
+                color: hsl(0, 0%, 98%);
+                top: 77% !important;
+            }
+
+            .profile-name {
+                font-size: 1.2rem !important;
+            }
+
+            .profile-role {
+                font-size: 1rem;
+                margin-top: 5px;
+            }
+        }
+
+        @media (max-width: 1420px) {
+            .profile-card:hover .profile-name-container {
+                top: 52%;
+                height: 3.8rem;
+                box-shadow: 0px 0px 15px 2px black;
+                color: #000000;
+                background-color: rgba(0, 204, 255, 0.897);
+            }
+
+            .profile-name {
+                font-size: 1.2rem !important;
+            }
+
+            .profile-role {
+                font-size: 1rem;
+                margin-top: 0px;
+            }
+
+            .profile-name-container {
+                width: 100%;
+                height: 5rem;
+                color: hsl(0, 0%, 98%);
+                top: 77%;
+            }
+
+            .profile-name {
+                font-size: 1.3rem;
+            }
+
+            .profile-role {
+                font-size: 1rem;
+                margin-top: 5px;
+            }
+        }
+
+        .profile-description-container {
+            visibility: hidden;
+            position: absolute;
+            padding-top: 10px;
+            width: 100%;
+            height: 7rem;
+            text-align: center;
+            z-index: 2;
+            top: 70%;
+            transform: scale(0.2);
+            transition: all 0.5s ease;
+        }
+
+        .profile-card:hover .profile-description-container {
+            top: 70%;
+            transform: scale(1);
+            visibility: visible;
+        }
+
+        .profile-description {
+            color: rgb(0, 204, 255);
+            margin-bottom: 0.5rem;
+            font-size: 2vh;
+            padding: 0px 10px;
+        }
+
+        .bi {
+            font-size: 1.5rem;
+            color: rgb(0, 204, 255);
+        }
+
+        @media (max-width: 768px) {
+            .profile-description {
+                color: rgb(0, 204, 255);
+                margin-bottom: 0.5rem;
+                font-size: 1rem;
+                text-align: center;
+                padding: 0px 10px;
+            }
+        }
+
+        @media (max-width: 1420px) {
+            .profile-description {
+                color: rgb(0, 204, 255);
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+                font-size: 0.9rem;
+                text-align: center;
+                padding: 0px 10px;
+            }
+
+            .bi {
+                font-size: 1.2rem;
+                color: rgb(0, 204, 255);
+            }
+        }
+
+        .linkedin-icon {
+    width: 30px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+    </style>
+</head>
+
+
+<body>
+    <div class="team-profile-wrapper">
+        <h1 class="team-profile-main-heading">Meet Our Team</h1>
+        <div class="team-list">
+                <div class="profile-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img class="profile-image" src="{% static 'user1.jpg' %}" alt="{{ employee.role }}" />
+                        </div>
+                        <div class="profile-name-container">
+                            <h2 class="profile-name">Mathews Kurian</h2>
+                            <p class="profile-role">Role: Founder</p>
+                        </div>
+                        <div class="profile-description-container">
+                            <p class="profile-description"></p>
+                                <img src="{% static 'linkedin.png' %}" alt="LinkedIn Profile" class="linkedin-icon">
+                        </div>
+
+                    </div>
+                </div>
+
+
+            <div class="profile-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img class="profile-image" src="{% static 'user1.jpg' %}" alt="{{ employee.role }}" />
+                        </div>
+                        <div class="profile-name-container">
+                            <h2 class="profile-name">Abhishek Kumar</h2>
+                            <p class="profile-role">Role: Chief Executive Officer</p>
+                        </div>
+                        <div class="profile-description-container">
+                            <p class="profile-description">{{ employee.about }}</p>
+                            <a href="https://www.linkedin.com/in/abhishek-kumar-6624b228a/" target="_blank">
+                                <img src="{% static 'linkedin.png' %}" alt="LinkedIn Profile" class="linkedin-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            <div class="profile-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img class="profile-image" src="{% static 'user1.jpg' %}" alt="{{ employee.role }}" />
+                        </div>
+                        <div class="profile-name-container">
+                            <h2 class="profile-name">Karthik Mukesh</h2>
+                            <p class="profile-role">Role: Business Expert </p>
+                        </div>
+                        <div class="profile-description-container">
+                            <p class="profile-description">{{ employee.about }}</p>
+                            <a href="https://www.linkedin.com/in/karthik-mukesh-1004b228a/" target="_blank">
+                                <img src="{% static 'linkedin.png' %}" alt="LinkedIn Profile" class="linkedin-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <div class="profile-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img class="profile-image" src="{% static 'user1.jpg' %}" alt="{{ employee.role }}" />
+                        </div>
+                        <div class="profile-name-container">
+                            <h2 class="profile-name">Mohammed Althaf KM</h2>
+                            <p class="profile-role">Role: Digital Marketing Manager </p>
+                        </div>
+                        <div class="profile-description-container">
+                            <p class="profile-description">{{ employee.about }}</p>
+                                <img src="{% static 'linkedin.png' %}" alt="LinkedIn Profile" class="linkedin-icon">
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <div class="profile-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img class="profile-image" src="{% static 'user1.jpg' %}" alt="{{ employee.role }}" />
+                        </div>
+                        <div class="profile-name-container">
+                            <h2 class="profile-name">HR Manager</h2>
+                            <p class="profile-role">Role: KIran Kishore</p>
+                        </div>
+                        <div class="profile-description-container">
+                            <p class="profile-description">{{ employee.about }}</p>
+                            <a href="https://www.linkedin.com/in/hr-metascifortechnologies/" target="_blank">
+                                <img src="{% static 'linkedin.png' %}" alt="LinkedIn Profile" class="linkedin-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <div class="profile-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img class="profile-image" src="{% static 'user1.jpg' %}" alt="{{ employee.role }}" />
+                        </div>
+                        <div class="profile-name-container">
+                            <h2 class="profile-name">HR Executive  </h2>
+                            <p class="profile-role">Role: Vaishali Khola</p>
+                        </div>
+                        <div class="profile-description-container">
+                            <p class="profile-description">{{ employee.about }}</p>
+                            <a href="https://www.linkedin.com/in/vaishali-khola-79985822b/" target="_blank">
+                                <img src="{% static 'linkedin.png' %}" alt="LinkedIn Profile" class="linkedin-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <div class="profile-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img class="profile-image" src="{% static 'user1.jpg' %}" alt="{{ employee.role }}" />
+                        </div>
+                        <div class="profile-name-container">
+                            <h2 class="profile-name">Joseph Antony</h2>
+                            <p class="profile-role">Role: Director Of Training </p>
+                        </div>
+                        <div class="profile-description-container">
+                            <p class="profile-description">{{ employee.about }}</p>
+                            <a href="https://www.linkedin.com/in/joseph-kattukaran/" target="_blank">
+                                <img src="{% static 'linkedin.png' %}" alt="LinkedIn Profile" class="linkedin-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <div class="profile-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img class="profile-image" src="{% static 'user1.jpg' %}" alt="{{ employee.role }}" />
+                        </div>
+                        <div class="profile-name-container">
+                            <h2 class="profile-name">Urooj Khan</h2>
+                            <p class="profile-role">Role: Data Science Trainer </p>
+                        </div>
+                        <div class="profile-description-container">
+                            <p class="profile-description">{{ employee.about }}</p>
+                            <a href="https://www.linkedin.com/in/uruj/" target="_blank">
+                                <img src="{% static 'linkedin.png' %}" alt="LinkedIn Profile" class="linkedin-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <div class="profile-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img class="profile-image" src="{% static 'user1.jpg' %}" alt="{{ employee.role }}" />
+                        </div>
+                        <div class="profile-name-container">
+                            <h2 class="profile-name">Farzana Rashid</h2>
+                            <p class="profile-role">Role: Python Development Trainer </p>
+                        </div>
+                        <div class="profile-description-container">
+                            <p class="profile-description">{{ employee.about }}</p>
+                            <a href="https://www.linkedin.com/in/farzana-rashid-6301461bb/" target="_blank">
+                                <img src="{% static 'linkedin.png' %}" alt="LinkedIn Profile" class="linkedin-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            <div class="profile-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img class="profile-image" src="{% static 'user1.jpg' %}" alt="{{ employee.role }}" />
+                        </div>
+                        <div class="profile-name-container">
+                            <h2 class="profile-name">Lekha Savale</h2>
+                            <p class="profile-role">Role: Frontend Development Trainer </p>
+                        </div>
+                        <div class="profile-description-container">
+                            <p class="profile-description">{{ employee.about }}</p>
+                                <img src="{% static 'linkedin.png' %}" alt="LinkedIn Profile" class="linkedin-icon">
+                        </div>
+                    </div>
+                </div>
+
+
+
+        </div>
+    </div>
+</body>
+</html>

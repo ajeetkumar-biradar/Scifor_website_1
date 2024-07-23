@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>GAME DEVELOPMENT</title> 
+        
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="{% static 'company_logo.png' %}" alt="Company Logo">
+                <p style="font-size: 28px; font-weight: bold;">Meta Scifor Technologies</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a onclick="window.location.href='/'" class="link ">Home</a></li>
+                    <li><a onclick="window.location.href='/services'" class="link active">Services</a></li>
+                    <li><a onclick="window.location.href='/about-us'" class="link">About</a></li>
+                    <li><a onclick="window.location.href='/case_study'" class="link">Case Studies</a></li>
+                    <li><a href="#footer" class="link">Contact</a></li>
+                    <li><a href="/carrer" class="link">Join Us</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+
+
+
+
+
+        <div class="container_">
+            <img src="{% static 'game1.jpg' %}" height="900" width="100%">
+            <div class="overlay left">
+                <h2 class="first-set" id="service_name" style="font-weight: bold;">GAME DEVELOPMENT</h2>
+            </div>
+        </div>
+
+        <section class="hidden">
+            <div class="container">
+                <img src="{% static 'gamecs1.jpg' %}" width="500" height="500">
+                <div class="text">
+                    <h1 id="why_title" class="title_" style="font-weight: bold;"></h1>
+                    <p id="service_description" style="text-align: justify;">Immerse your audience in captivating experiences with our expert Game Development solutions, blending creativity and technology seamlessly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hidden" >
+            <!-- <div container> -->
+            <div class="text-box">
+            <h2 class="title"> OVERVIEW</h2>
+            <p id="service_overview" style="text-align: justify;">Embark on an exhilarating journey of creativity and innovation with Meta Scifor Technologies' Game Development services. Our passionate team of game developers combines technical prowess with artistic vision to craft immersive gaming experiences across platforms. From captivating narratives and stunning visuals to seamless gameplay and engaging mechanics, we specialize in bringing your game ideas to life. Whether you're looking to create mobile games, AR/VR experiences, or multiplayer online games, our Game Development solutions are designed to captivate players, drive engagement, and elevate your brand in the dynamic world of gaming. Game development is the creative fusion of technology and imagination, where every line of code breathes life into immersive worlds and captivating experiences. From conceptualization to execution, our game development services encompass the entire journey of crafting compelling narratives, stunning visuals, and engaging gameplay mechanics. Whether it's mobile, console, or PC, we specialize in delivering entertainment that transcends boundaries, sparking joy and fostering connections in the digital realm. Our game development services are driven by a relentless pursuit of excellence, blending artistry with technology to craft experiences that captivate, challenge, and inspire. With a keen eye for detail and a commitment to innovation, we bring ideas to life in vibrant, interactive worlds where players can explore, conquer, and create memories that last a lifetime. From indie gems to AAA blockbusters, our team is dedicated to pushing the boundaries of what's possible in gaming. We thrive on the thrill of creation, embracing the iterative process to refine mechanics, polish visuals, and perfect gameplay until every element shines. With a focus on player-centric design and a passion for pushing the envelope, we're poised to redefine the gaming landscape one experience at a time. Our game development services encompass a holistic approach, from ideation to launch, ensuring captivating experiences that resonate with players. Leveraging cutting-edge technologies and creative expertise, we bring your game ideas to life with immersive storytelling, innovative gameplay, and stunning visuals.In the realm of pixels and play, we craft dreams into digital realities, where every click sparks wonder and every level unlocks imagination. Embark on an exhilarating journey of creativity and innovation with Meta Scifor Technologies' Game Development services. Our passionate team of game developers combines technical prowess with artistic vision to craft immersive gaming experiences across platforms. From captivating narratives and stunning visuals to seamless gameplay and engaging mechanics, we specialize in bringing your game ideas to life.</p>
+            </div>
+            <!-- </div> -->
+
+        </section>
+        
+
+        <section class="hidden">
+            <div class="container">
+                <div class="text">
+                    <h2 class="title_" style="font-weight: bold;">EXPERTISE AND SOLUTIONS</h2>
+                    <ul id="service_expertise" style="text-align: justify;">Creative game design and development for immersive player experiences.Multi-platform game development for desktop, mobile, and virtual reality (VR). Integration of graphics, audio, and storytelling elements for engaging gameplay. Testing, optimization, and updates to ensure smooth performance and player satisfaction. Utilization of cutting-edge technologies and industry best practices for innovation and quality.Experience across multiple platforms, including mobile, console, and PC, catering to diverse audiences.</ul>
+                </div>
+                <img src="{% static 'gamecs2.jpg' %}" width="500" height="500">
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+        <footer>
+            <div id="footer" class="footer-content">
+                <div class="social-media">
+                    <!-- Company logo -->
+                    <a href="/" id="company-logo">
+                    <img src="{% static 'emplo.png' %}" alt="Logo" class="company-logo" style="width: 150px; height: auto;">
+                    </a>
+                    <p class="slogan" style="margin-bottom: 140px; margin-left:-45px;">Script. Sculpt. Socialize!</p>
+                    
+                    <div class="header-links">
+                        <h3 style= "color: #3E8EDE; font-size: 25px; font-weight: bold;">LINKS</h3>
+                        <h3 style="font-size: 15px; font-weight: bold; cursor: pointer; "><a href="/" style="color: inherit; text-decoration: none;">HOME</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold; cursor: pointer;"><a onclick="window.location.href='/services'" target="_blank" style="color: inherit; text-decoration: none;">SERVICES</h3>
+                        <h3 style= "font-size: 15px; font-weight: bold;cursor: pointer;"><a href="About.html" target="_blank" style="color: inherit; text-decoration: none;">ABOUT</h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold;cursor: pointer;"><a onclick="window.location.href='/case_study'" target="_blank" style="color: inherit; text-decoration: none;">CASE STUDIES</a></li>                            
+                        <h3 style= "font-size: 15px; font-weight: bold;cursor: pointer;"><a href="#footer" style="color: inherit; text-decoration: none;">CONTACT</a></h3>
+                        <h3 style= "font-size: 15px; font-weight: bold;cursor: pointer;"><a href="JoinUs.html" target="_blank" style="color: inherit; text-decoration: none;">JOIN US</h3>
+                    </div>
+                    
+                    <!-- Social media icons -->
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg" target="_blank"><img src="{% static 'fb.png' %}" alt="Facebook"></a></li>
+                <li><a href="#"><img src="{% static 'twitter.png') }}" alt="Twitter"></a></li>
+                <li><a href="https://www.linkedin.com/company/scifortechnologies/" target="_blank"><img src="{% static 'linkedin.png' %}" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="{% static 'wp.png' %}" alt="Whatsapp"></a></li>
+                <li><a href="#"><img src="{% static 'youtube.png' %}" alt="Youtube"></a></li>
+                <li><a href="https://www.instagram.com/metascifortechnologies?igsh=MXVwbXdodm5pYWFqNA==" target="_blank"><img src="{% static 'instagram.png' %}" alt="LinkedIn"></a></li>
+                <!-- Add more social media icons as needed -->
+            </ul>
+        </div>
+                <div class="company-details">
+                    <h2 style= "color: #3E8EDE; font-size: 40px; font-weight: bold; margin-left: 300px;">CONTACT US</h2>
+                    <h3 style= "font-size: 30px; font-weight: bold; margin-left: 300px;">Meta Scifor Technologies</h3>
+                    <p style= "margin-left: 300px;">Address: No.13-14, 2nd floor, Kothnur Main Rd</p>
+                    <p style= "margin-left: 300px;">JP Nagar 7th Phase, Bengaluru</p>
+                    <p style= "margin-left: 300px;">Karnataka 560078S</p>
+                    <p style= "margin-left: 300px;">Email: info@scifortechnologies.com</p>
+                    <p style= "margin-left: 300px;">Phone: +916235187933</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p style= "color: #3E8EDE; margin-left: 70px; font-size: 15px;">&copy; 2024 Meta Scifor Technologies. All Rights Reserved.</p>
+            </div>
+            <div class="copyright">
+                <a href="#" class="terms-link" style= "color: #3E8EDE; font-size: 15px;">Terms & Conditions</a>
+            </div>
+        </footer>
+
+
+        
+        <script src="/static/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+    </body>
+</html>

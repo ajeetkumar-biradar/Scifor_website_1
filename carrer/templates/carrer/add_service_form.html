@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'meet.css' %}">
+    <style>
+        *{  
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #b2c7e8;
+            overflow-y: auto; /* Enable vertical scrolling for the entire page */
+        }
+        .input-box {
+            margin-bottom: 5px;
+        }
+        
+        .form-box{
+            height: 1000px;
+        }
+   
+    </style> 
+</head>
+<body>
+    <div class="form-box">
+        <div class="login-container" id="login">
+            <header class="top">Add New Service</header>
+            <form action="/add" method="post" enctype="multipart/form-data">
+            <div class="input-box">
+                <label for="service_name">Service Name:</label>
+                <input type="text" id="service_name" name="service_name" class="input-field" required>
+            </div>
+            <div class="input-box">
+                <label for="main_image">Main Image:</label>
+                <input type="file" id="main_image" name="main_image" class="input-field" required>
+            </div>
+            <div class="input-box">
+                <label for="service_description">Service Description:</label>
+                <textarea id="service_description" name="service_description" class="input-field" required></textarea>
+            </div>
+            <div class="input-box">
+                <label for="service_image">Service Image:</label>
+                <input type="file" id="service_image" name="service_image" class="input-field" required>
+            </div>
+            <div class="input-box">
+                <label for="service_overview">Service Overview:</label>
+                <textarea id="service_overview" name="service_overview" class="input-field" required></textarea>
+            </div>
+            <div class="input-box">
+                <label for="service_expertise">Service Expertise:</label>
+                <textarea id="service_expertise" name="service_expertise" class="input-field" rows="6" cols="50" required></textarea>
+            </div>
+            <p>NOTE: For BULLET POINT press enter after each point </p>
+           
+            <div class="input-box">
+                <label for="expertise_image">Expertise Image:</label>
+                <input type="file" id="expertise_image" name="expertise_image" class="input-field" required>
+            </div>
+            <div class="input-box">
+                <label for="short_description">Add a Short description for the Main service Page</label>
+                <textarea id="short_description" name="short_description" class="input-field" required></textarea>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Submit">
+            </div>
+        </form>
+        {% if message %}
+        <div>{{ message }}</div>
+        {% endif %}
+        </div>
+    </div>
+</body>
+</html>

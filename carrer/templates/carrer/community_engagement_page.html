@@ -1,0 +1,1074 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scifor Technologies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Include the Slick carousel styles -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="{% static 'page.css' %}" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+            body {
+              background-image: url("/static/image1.jpg"); /* Set the background image for the entire page */
+            }
+
+            .nav-link {
+              font-size: 20px;
+              font-weight: bold;
+              color: #fff !important;
+              margin: 0 5px;
+              padding-bottom: 15px;
+              position: relative;
+            }
+
+            .nav-link:hover,
+            .active {
+              border-bottom: 2px solid #fff;
+              cursor: pointer;
+            }
+            .navbar-brand img{
+              margin-left: 30px;
+
+            }
+
+            .navbar-brand p {
+              margin: 0;
+              font-size: 28px;
+              font-weight: bold;
+              color: white"
+            }
+
+            .navbar-toggler-icon {
+              background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+
+            @media (max-width: 990px) {
+              .navbar-collapse {
+                justify-content: flex-end;
+              }
+              .navbar-nav {
+                text-align: right;
+              }
+
+              .nav-item {
+                margin: 0;
+              }
+
+              .nav-link {
+                padding: 10px 0;
+                display: block;
+              }
+            }
+            @media (max-width: 500px) {
+              .navbar {
+                margin: 3px;
+              }
+              .navbar-brand img {
+                margin-left: 2px;
+                width: 40;
+              }
+              .navbar-brand p {
+                font-size: 20px;
+                margin: 0;
+              }
+              .navbar-toggler {
+                margin-right: 0;
+              }
+            }
+
+            .community-engagement-component {
+              background-color: #171717;
+              margin: 0;
+              padding: 0;
+              min-height: 100vh;
+            }
+
+            .header-section {
+              text-align: center;
+              position: relative;
+              width: 90%;
+              margin-top: 100px;
+              margin-right: auto;
+              margin-left: auto;
+            }
+
+            .header-section img {
+              width: 600px;
+              position: absolute;
+              left: -300px;
+              top: -230px;
+              z-index: 1;
+            }
+
+            /* .community-engagement-component h1, h2, h3, h4, h5, h6, p {
+          margin: 0;
+          padding: 0
+      } */
+
+            .heading {
+              font-size: 3.2rem;
+              padding-top: 100px;
+              white-space: noWrap;
+              color: #fff;
+              margin: 0;
+              z-index: 4;
+            }
+
+            .background-text-one,
+            .background-text-two {
+              font-size: 9rem;
+              opacity: 0.05;
+              color: #fff;
+              position: absolute;
+              top: 80px;
+              left: 0;
+              right: 0;
+              margin: auto;
+              transform: translateY(-50%);
+              z-index: 2;
+            }
+
+            .background-text-two {
+              top: 185px;
+            }
+
+            .second-section {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-top: 150px;
+            }
+
+            .second-section h3 {
+              margin: 0 50px;
+              font-size: 1.1rem;
+              font-weight: bold;
+              white-space: noWrap;
+              color: #fff;
+              border-radius: 50px;
+              z-index: 4;
+            }
+
+            .second-section h3:hover {
+              cursor: pointer;
+            }
+
+            .second-section .active {
+              background: linear-gradient(135deg, #00c6ff, #0072ff);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+
+            .third-section {
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+              margin-top: 50px;
+              margin-right: auto;
+              margin-left: auto;
+            }
+
+            .all-articles {
+              width: 75%;
+              margin-right: 30px;
+            }
+
+            .article-preview {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 25px;
+              border-bottom: 1px solid #262626;
+            }
+
+            .article-preview p {
+              color: #fff;
+            }
+
+            .article-preview .image-container img {
+              margin-right: 20px;
+              width: 400px;
+              height: 220px;
+              border-radius: 10px;
+            }
+
+            .article-preview .text-container {
+              width: 100%;
+            }
+
+            .text-container .categories p {
+              font-size: 0.6rem;
+              font-weight: 500;
+              background-color: #eeeeee;
+              border-radius: 2px;
+              padding: 5px;
+              display: inline-block;
+              max-width: max-content;
+              color: #000;
+            }
+            .article-preview .text-container .title {
+              font-size: 1.3rem;
+              margin-bottom: 8px;
+              font-weight: bold;
+              color: white; /* Added to change text color to white */
+            }
+
+            .text-container .content {
+              font-weight: 300;
+              margin-bottom: 8px;
+            }
+
+            .text-container .author {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+            }
+
+            .author p {
+              font-size: 0.8rem;
+            }
+
+            .author .dash {
+              width: 80px;
+              height: 1.3px;
+              background-color: #fff;
+              margin: 0 5px 0 5px;
+            }
+
+            .text-container button {
+              border: none;
+              background-image: linear-gradient(
+                to right,
+                #00c6ff 0%,
+                #0072ff 51%,
+                #00c6ff 100%
+              );
+              color: #fff;
+              border-radius: 4px;
+              padding: 10px 20px 10px 20px;
+              margin-top: 10px;
+              font-weight: bold;
+              transition: 0.5s;
+              background-size: 200% auto;
+            }
+
+            .text-container button:hover {
+              cursor: pointer;
+              background-position: right center;
+            }
+
+            .latest-articles {
+              padding-left: 50px;
+              border-left: 1.3px solid #262626;
+              width: 20%;
+            }
+
+            .latest-articles h3 {
+              margin-bottom: 20px;
+              font-size: 1.3rem;
+              color: #fff;
+            }
+
+            .latest-article-container {
+              background-color: #1e1e1e;
+              margin-bottom: 35px;
+              width: 250px;
+              border-radius: 10px;
+            }
+
+            .latest-article-container:hover {
+              cursor: pointer;
+              transform: scale(1.05);
+              transition: transform 0.3s ease;
+            }
+
+            .latest-article-container img {
+              margin: 0;
+              padding: 0;
+              width: 250px;
+              height: 200px;
+              border-radius: 5px 5px 0 0;
+            }
+
+            .latest-article-text {
+              background-color: #1e1e1e;
+              color: #fff;
+              padding: 10px;
+              margin: 0;
+              border-radius: 0 0 5px 5px;
+            }
+
+            .latest-article-container .title {
+              font-size: 1rem;
+              margin-bottom: 7px;
+              line-height: 1.4rem;
+              font-weight: bold;
+            }
+
+            .latest-article-container .content {
+              font-size: 0.95rem;
+              font-weight: 300;
+              line-height: 1.3rem;
+            }
+
+            .latest-article-container .date {
+              margin-top: 8px;
+              text-align: right;
+              font-size: 0.8rem;
+            }
+
+            @media screen and (max-width: 1345px) {
+              .all-articles {
+                width: 65%;
+              }
+
+              .article-preview .image-container img {
+                width: 300px;
+                height: 250px;
+              }
+              .latest-articles {
+                padding-left: 20px;
+              }
+
+              .latest-article-container {
+                width: 300px;
+              }
+
+              .latest-article-container img {
+                width: 300px;
+                height: 240px;
+              }
+              .heading {
+                font-size: 3.5rem;
+              }
+              .second-section {
+                font-size: 1.2rem;
+              }
+              .article-preview .text-container .title {
+                font-size: 1.4rem;
+              }
+              .text-container .content {
+                font-size: 1.1rem;
+              }
+              .text-container .author p {
+                font-size: 0.9rem;
+              }
+            }
+
+            @media screen and (max-width: 1200px) {
+              .article-preview .image-container img {
+                width: 250px;
+                height: 200px;
+              }
+
+              .latest-articles {
+                padding-left: 20px;
+              }
+
+              .latest-article-container {
+                width: 250px;
+              }
+
+              .latest-article-container img {
+                width: 250px;
+                height: 200px;
+              }
+              .heading {
+                font-size: 3.8rem;
+              }
+              .second-section h3 {
+                font-size: 1.4rem;
+              }
+
+              .article-preview .text-container .title {
+                font-size: 1.6rem;
+              }
+
+              .text-container .content {
+                font-size: 1.2rem;
+              }
+              .text-container .author p {
+                font-size: 1rem;
+              }
+            }
+
+            @media screen and (max-width: 1040px) {
+              .latest-articles {
+                display: none;
+              }
+              .background-text-one,
+              .background-text-two {
+                font-size: 7rem;
+              }
+              .header-section {
+                width: 100%;
+              }
+
+              .background-text-one {
+                top: 90px;
+              }
+              .background-text-two {
+                top: 170px;
+              }
+              .all-articles {
+                width: 90%;
+              }
+              .heading {
+                font-size: 4rem;
+              }
+
+              .second-section h3 {
+                font-size: 1.6rem;
+              }
+
+              .article-preview .text-container .title {
+                font-size: 1.8rem;
+              }
+
+              .text-container .content {
+                font-size: 1.4rem;
+              }
+              .text-container .author p {
+                font-size: 1.1rem;
+              }
+            }
+
+            @media screen and (max-width: 700px) {
+              .background-text-one,
+              .background-text-two {
+                font-size: 5rem;
+              }
+              .heading {
+                font-size: 2rem;
+              }
+
+              .background-text-two {
+                top: 150px;
+              }
+
+              .all-articles {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              .article-preview {
+                flex-wrap: wrap;
+                width: 390px;
+                margin-left: auto;
+                margin-right: auto;
+              }
+
+              .article-preview .image-container img {
+                width: 390px;
+                height: 280px;
+              }
+
+              .second-section h3 {
+                margin: 0 -10px 0px -10px;
+                margin: auto;
+                font-size: 1.5rem;
+              }
+              .article-preview .text-container .title {
+                font-size: 2rem;
+              }
+
+              .text-container .content {
+                font-size: 1.6rem;
+              }
+
+              .text-container .author p {
+                font-size: 1.2rem;
+              }
+            }
+
+            @media screen and (max-width: 500px) {
+              .background-text-one,
+              .background-text-two {
+                font-size: 3.5rem;
+              }
+              .heading {
+                font-size: 1.5rem;
+              }
+
+              .background-text-two {
+                top: 140px;
+              }
+              .second-section {
+                margin-right: 5px;
+                margin-left: 5px;
+                margin-top: 70px;
+              }
+              .article-preview {
+                width: 320px;
+              }
+              .article-preview .image-container img {
+                width: 320px;
+                height: 270px;
+              }
+              .second-section h3 {
+                font-size: 2rem;
+              }
+
+              .article-preview .text-container .title {
+                font-size: 2.2rem;
+              }
+
+              .text-container .content {
+                font-size: 1.8rem;
+              }
+
+              .text-container .author p {
+                font-size: 1.4rem;
+              }
+            }
+
+            @media screen and (max-width: 420px) {
+              .heading-section {
+                width: 100%;
+              }
+              .background-text-one,
+              .background-text-two {
+                font-size: 3rem;
+              }
+
+              .second-section h3 {
+                font-size: 1rem;
+                margin: 0px 10px 0px 20px;
+                margin: 5px;
+              }
+              .article-preview {
+                width: 300px;
+              }
+              .article-preview .image-container img {
+                width: 290px;
+                height: 230px;
+              }
+              .article-preview .text-container .title {
+                font-size: 2.4rem;
+              }
+
+              .text-container .content {
+                font-size: 2rem;
+              }
+
+              .text-container .author p {
+                font-size: 1.6rem;
+              }
+            }
+
+            .read-more-button {
+              display: inline-block;
+              padding: 8px 16px;
+              margin-top: 10px;
+              background-color: #007bff; /* Adjust the color as needed */
+              color: white;
+              text-align: center;
+              text-decoration: none;
+              border-radius: 4px;
+              transition: background-color 0.3s;
+            }
+
+            .read-more-button:hover {
+              background-color: #0056b3; /* Adjust the hover color as needed */
+            }
+            .footer {
+              background-color: #000;
+              color: white;
+            }
+            .footer .footer-title {
+              color: #3e8ede;
+            }
+            .footer .social-icons a {
+              font-size: 1.5em;
+              margin-right: 10px;
+              text-decoration: none;
+            }
+            .footer .social-icons img {
+              width: 30px;
+              height: auto;
+            }
+    </style>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+
+  <body>
+    <!-- <nav class="nav">
+      <div class="nav-logo">
+        <img src="{% static 'company_logo.png' %}" alt="Company Logo" />
+        <p style="font-size: 28px; font-weight: bold">
+          Meta Scifor Technologies
+        </p>
+      </div>
+      <div class="nav-menu" id="navMenu">
+        <ul>
+          <li>
+            <a
+              onclick="window.location.href='/'"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="window.location.href='/services'"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="window.location.href='/about-us'"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="window.location.href='/case_study'"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >Case Studies</a
+            >
+          </li>
+          <li>
+            <a
+              href="#footer"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="window.location.href='/community'"
+              class="link active"
+              style="font-size: 20px; font-weight: bold"
+              >Community</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="window.location.href='/carrer'"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >Join Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000">
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="{% static 'images/Meta Scifor Icon.png' %}" width="60px" alt="Company Logo"/>
+        <p class="m-2">Meta Scifor Technologies</p>
+      </a>
+      <button class="navbar-toggler mr-5 p-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about-us">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/case_study">Case Studies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="/community">Community</a></li>
+          <li class="nav-item"><a class="nav-link" href="/career">Join Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="community-engagement-component">
+        <div class="header-section">
+          <h1 class="heading">COMMUNITY ENGAGEMENT</h1>
+          <h2 class="background-text-one">COMMUNITY</h2>
+          <h2 class="background-text-two">ENGAGEMENT</h2>
+        </div>
+        <div class="second-section">
+          <h3
+            class="{% if active_category == 'TECH BLOGS' %}active{% endif %}"
+            onclick="changeCategory('TECH BLOGS')"
+          >
+            TECH BLOGS
+          </h3>
+          <h3
+            class="{% if active_category == 'TECH NEWS' %}active{% endif %}"
+            onclick="changeCategory('TECH NEWS')"
+          >
+            TECH NEWS
+          </h3>
+          <h3
+            class="{% if active_category == 'INDUSTRY UPDATES' %}active{% endif %}"
+            onclick="changeCategory('INDUSTRY UPDATES')"
+          >
+            INDUSTRY UPDATES
+          </h3>
+        </div>
+
+        <div class="third-section">
+          <div class="all-articles">
+            {% for article in articles %}
+            <div class="article-preview">
+              <div class="image-container">
+                <img
+                  src="{{ article.headline_image.url }}"
+                  alt="article-image"
+                  width="100%"
+                />
+              </div>
+              <div class="text-container">
+                <div class="categories">
+                  <p>{{ article.category }}</p>
+                </div>
+                <div class="title">{{ article.title|safe }}</div>
+                <p class="content">
+                  {{ article.content|truncatewords_html:30 }}
+                </p>
+                <p class="content"></p>
+
+                <div class="author">
+                  <p>
+                    by
+                    <span style="font-weight: 500">Meta Scifor Technologies - </span>
+                  </p>
+                  <p>- {{ article.created_on|date:"F j, Y" }}</p>
+                </div>
+                <a
+                  href="{{ article.get_absolute_url }}"
+                  class="read-more-button"
+                  >Read More</a
+                >
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer mt-5py-3">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-lg-6 mb-2">
+            <div style="display: flex; align-items: center;">
+              <a href="/" id="company-logo" class="text-decoration-none">
+              <img
+                src="{% static 'images/Meta Scifor Icon.png' %}"
+                alt="Logo"
+                class="img-fluid"
+                style="width: 80px; height: auto;"
+              />
+            </a>
+            <div>
+              
+              <span class="fw-bold" style="font-size: 20px; display: block;">Meta</span>
+              <span class="fw-bold" style="font-size: 20px;">Scifor Technologies</span>
+            </div>
+            </div>
+            <p class="fw-bold ms-4 mt-2" style="margin-bottom: 50px; font-size: 20px">
+              Script. Sculpt. Socialize!
+              <!--<img
+                src="{% static 'images/Meta Scifor Technologies.png' %}"
+                width="350"
+                height="80"
+                alt="Company Logo"
+              />-->
+            </p>
+            <div class="social-icons mt-4 ms-4">
+              <a
+                href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg"
+                target="_blank"
+              >
+                <img src="{% static 'fb.png' %}" alt="Facebook" />
+              </a>
+              <a href="#">
+                <img src="{% static 'twitter.png' %}" alt="Twitter" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/scifortechnologies/"
+                target="_blank"
+              >
+                <img src="{% static 'linkedin.png' %}" alt="LinkedIn" />
+              </a>
+              <a href="#">
+                <img src="{% static 'wp.png' %}" alt="Whatsapp" />
+              </a>
+              <a href="#">
+                <img src="{% static 'youtube.png' %}" alt="Youtube" />
+              </a>
+              <a
+                href="https://www.instagram.com/metascifortechnologies?igsh=MXVwbXdodm5pYWFqNA=="
+                target="_blank"
+              >
+                <img src="{% static 'instagram.png' %}" alt="Instagram" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h3 class="footer-title fw-bold mb-3">Links</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-white" style="text-decoration: none"
+                  >HOME</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="/services"
+                  class="text-white"
+                  style="text-decoration: none"
+                  target="_blank"
+                  >SERVICES</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="/about-us"
+                  class="text-white"
+                  style="text-decoration: none"
+                  target="_blank"
+                  >ABOUT</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="/case_study"
+                  class="text-white"
+                  style="text-decoration: none"
+                  target="_blank"
+                  >CASE STUDIES</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#footer"
+                  class="text-white"
+                  style="text-decoration: none"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  onclick="window.location.href='/carrer'"
+                  class="link"
+                  style="font-size: 20px; font-weight: bold"
+                  >Join Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h3 class="footer-title fw-bold mb-3">CONTACT US</h3>
+            <p class="fw-bold display-6">Meta Scifor Technologies Pvt. Ltd.</p>
+            <p>No.13-14, 2nd floor, Kothnur Main Rd</p>
+            <p>JP Nagar 7th Phase, Bengaluru</p>
+            <p>Karnataka 560078</p>
+            <p>
+              Email:
+              <a href="mailto:info@scifortechnologies.com" class="text-white text-decoration-none"
+                >info@scifortechnologies.com</a
+              >
+              
+              <p>Email:
+                <a href="mailto:support@scifortechnologies.com" class="text-white text-decoration-none"
+                >support@scifortechnologies.com</a
+              >
+              </p>
+            </p>
+            <p>
+              Phone:
+              <a href="tel:+916235187933" class="text-white text-decoration-none"
+                >+916235187933, 7676646007</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <p>
+              &copy; 2024 Meta Scifor Technologies Pvt. Ltd. All Rights
+              Reserved.
+            </p>
+            <a href="#" class="text-white">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--<footer>
+      <div id="footer" class="footer-content">
+        <div class="social-media">
+          <!-- Company logo -->
+    <!-- <a href="/" id="company-logo">
+            <img
+              src="{% static 'emplo.png' %}"
+              alt="Logo"
+              class="company-logo"
+              style="width: 150px; height: auto"
+            />
+          </a>
+          <p class="slogan" style="margin-bottom: 140px; margin-left: -45px">
+            Script. Sculpt. Socialize!
+          </p>
+
+          <div class="header-links">
+            <h3 style="color: #3e8ede; font-size: 25px; font-weight: bold">
+              LINKS
+            </h3>
+            <h3 style="color: white; font-size: 15px; font-weight: bold">
+              <a href="/" style="color: inherit; text-decoration: none">HOME</a>
+            </h3>
+            <h3 style="color: white; font-size: 15px; font-weight: bold">
+              <a href="/services" style="color: inherit; text-decoration: none"
+                >SERVICES</a
+              >
+            </h3>
+            <h3 style="color: white; font-size: 15px; font-weight: bold">
+              <a href="/about" style="color: inherit; text-decoration: none"
+                >ABOUT</a
+              >
+            </h3>
+            <h3 style="color: white; font-size: 15px; font-weight: bold">
+              <a
+                href="/case_studies"
+                style="color: inherit; text-decoration: none"
+                >CASE STUDIES</a
+              >
+            </h3>
+            <h3 style="color: white; font-size: 15px; font-weight: bold">
+              <a href="#footer" style="color: inherit; text-decoration: none"
+                >CONTACT</a
+              >
+            </h3>
+            <li>
+              <a
+                onclick="window.location.href='/carrer'"
+                class="link"
+                style="font-size: 20px; font-weight: bold"
+                >Join Us</a
+              >
+            </li>
+          </div>-->
+
+    <!-- Social media icons -->
+    <!-- <ul class="social-icons">
+            <li>
+              <a
+                href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg"
+                target="_blank"
+                ><img src="{% static 'fb.png' %}" alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="{% static 'twitter.png' %}" alt="Twitter"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/scifortechnologies/"
+                target="_blank"
+                ><img src="{% static 'linkedin.png' %}" alt="LinkedIn"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="{% static 'wp.png' %}" alt="Whatsapp" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="{% static 'youtube.png' %}" alt="Youtube"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/metascifortechnologies?igsh=MXVwbXdodm5pYWFqNA=="
+                target="_blank"
+                ><img src="{% static 'instagram.png' %}" alt="LinkedIn"
+              /></a>
+            </li>-->
+    <!-- Add more social media icons as needed -->
+    <!--</ul>
+        </div>
+        <div class="company-details">
+          <h2
+            style="
+              color: #3e8ede;
+              font-size: 40px;
+              font-weight: bold;
+              margin-left: 300px;
+            "
+          >
+            CONTACT US
+          </h2>
+          <h3 style="font-size: 30px; font-weight: bold; margin-left: 300px">
+            Meta Scifor Technologies
+          </h3>
+          <p style="margin-left: 300px">
+            Address: No.13-14, 2nd floor, Kothnur Main Rd
+          </p>
+          <p style="margin-left: 300px">JP Nagar 7th Phase, Bengaluru</p>
+          <p style="margin-left: 300px">Karnataka 560078S</p>
+          <p style="margin-left: 300px">Email: info@scifortechnologies.com</p>
+          <p style="margin-left: 300px">Phone: +916235187933</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p style="color: #3e8ede; margin-left: 45px; font-size: 15px">
+          &copy; 2024 Meta Scifor Technologies. All Rights Reserved.
+        </p>
+      </div>
+      <div class="left-section">
+        <a href="#" class="terms-link" style="color: #3e8ede; font-size: 15px"
+          >Terms & Conditions</a
+        >
+      </div>
+    </footer>-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function changeCategory(category) {
+        const url = new URL(window.location);
+        url.searchParams.set("category", category);
+        window.location = url.href;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,561 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    /*background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 255, 0, 0.5));*/
+    background: linear-gradient(to right, #010B13, #36454F);    
+}
+
+  .all-jobs-heading {
+    font-size: 2rem;
+    padding-top: 8rem;
+    padding-left: 10%;
+    color: white;
+  }
+
+  .outer-jobs{
+    width: 80%; 
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+  @media only screen and (max-width: 540px) {
+    .all-jobs-heading {
+      font-size: 1.2rem;
+    }
+  }
+  .outer-jobs {
+    transition: all 500ms;
+    display: flex;
+  }
+  
+  #allJobs {
+    transition: all 500ms;
+    width: 50%;
+    flex: 1;
+    height: 80vh;
+    overflow-y: scroll;
+  }
+  
+  #description {
+    flex: 0;
+    transition: all 1000ms;
+    opacity: 1;
+    margin: 0 20px;
+  }
+  
+  .job-desc {
+    position: relative;
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .hover {
+    position: absolute;
+    transition: all 500ms;
+    right: -100%;
+    top: 0px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.185);
+    z-index: 100;
+    height: 100%;
+  }
+  
+  .jobs-card {
+    height: 38vh;
+    width: 36vw;
+    border: 1px solid #7b7b7b;
+    padding: 3%;
+    border-radius: 10px;
+    transition: all 500ms;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+  }
+  
+  .jobs-card-big {
+    height: fit-content;
+    width: 96%;
+    margin: 10px 0;
+  }
+  
+  .job-intro {
+    line-height: 1vh;
+  }
+  .job-intro span {
+    display: flex;
+  }
+  .job-intro span h3 {
+    font-size: 1.6rem;
+  }
+  .job-intro span img {
+    height: 2rem;
+    width: 2rem;
+    margin-left: 10px;
+  }
+  
+  .more-btn {
+    text-align: center;
+    padding: 10px;
+    /* margin: 3rem; */
+    /* margin-top: 7%; */
+    height: 6vh;
+    width: 9vw;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .more-btn-all {
+    margin-top: 7%;
+    float: right;
+    background: linear-gradient(-45deg,#23a6d5, #23d5ab);
+    color: #fff;
+  }
+  
+  @media only screen and (max-width: 540px){
+    .more-btn-all{
+      margin-top: 18%;
+      float: right;
+      background: linear-gradient(-45deg,#23a6d5, #23d5ab);
+      color: #fff;
+      width: 34%;
+    }
+
+    .more-btn{
+      text-align: center;
+      padding: 10px;
+      height: 6vh;
+      border: none;
+      border-radius: 10px;
+    }
+
+    span p{
+      font-size: 0.8rem;
+    }
+  }
+  
+  .apply-now{
+      /* margin: 0px; */
+      float: right;
+      text-align: center;
+      padding: 10px;
+      /* margin: 3rem; */
+      background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+      color: #fff;
+      margin-top: 7%;
+      height: 6vh;
+      width: 10vw;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+  
+  .jobs-count {
+    margin-top: 10px;
+    line-height: 1vh;
+  }
+  
+  .right-image img {
+    margin-top: 10px;
+    width: 30vw;
+    height: 80vh;
+    border-radius: 10px;
+  }
+  
+  @media only screen and (max-width: 540px){
+    .right-image img{
+      display: none;
+    }
+
+    .jobs-card-big{
+      width: 100%;
+    }
+    .outer-jobs{
+      width: 100%;
+    margin-left: 1rem;
+    /* margin-right: auto; */
+    overflow-x: hidden;
+    }
+
+  }
+
+  .community {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: fit-content;
+    width: 100vw;
+    justify-content: space-between;
+    background: linear-gradient(to right, #80FFDB, #5390D9);
+  }
+  
+  .community-heading {
+    font-size: 2rem;
+    padding-top: 4rem;
+  }
+  
+  .community-text p {
+    font-size: 1.2rem;
+    padding-top: 2vh;
+    padding-bottom: 3rem;
+    width: 50vw;
+
+    /* padding-left: 10%; */
+    /* padding-right: 10%; */
+  }
+  
+  /* .community-image{
+      height: 36vh;
+      width: 60vw;
+    } */
+  .community-image img {
+    border-radius: 20px;
+    height: 70%;
+    width: 100%;
+  
+    margin-top: 7rem;
+  }
+  
+  @media only screen and (max-width: 540px) {
+    .community {
+      display: block;
+    }
+    .community-heading {
+      font-size: 1.2rem;
+      width: 90vw;
+    }
+    .community-text p {
+      font-size: 1.2rem;
+      padding-bottom: 1rem;
+      width: 100%;
+    }
+  
+    .community-image img {
+      margin-top: 0;
+      /* width: 100vw; */
+  
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  }
+  
+  .back-button-form {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 0.3rem 1rem;
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .l-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form {
+    width: 80%;
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgb(92 99 105 / 20%);
+    /* background: radial-gradient(37.53% 147.33% at 5.39% 8.57%, 
+    rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(
+    180deg, #26282a 0%, #212325 100%); */
+    background-color: #fff;
+  }
+  
+  .form_title {
+    font-weight: 200;
+  }
+  
+  .form h1 {
+    margin-bottom: 3rem;
+    color: inherit;
+    text-align: center;
+  }
+  
+  .form_div {
+    position: relative;
+    height: 48px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .JobID {
+    visibility: hidden;
+  }
+  
+  .form_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    border: 1px solid #dadce0;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+  }
+  
+  .form_input_file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    border: 1px solid #dadce0;
+    border-radius: 0.5rem;
+    /* outline: none; */
+    padding: 10px;
+    background: none;
+    z-index: 1;
+  }
+  
+  .text_area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    border: 1px solid #dadce0;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 1rem;
+    background: none;
+    z-index: 1;
+  }
+  
+  .form_label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 0.25rem;
+    background-color: #fff;
+    /*background-color: #26282a;*/
+    color: var(--input-color);
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+  
+  .form_button {
+    display: block;
+    padding: 0.75rem 2rem;
+    /* outline: none; */
+    border: none;
+    /* margin-top: 80px; */
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* .form_button{
+      box-shadow: 0 10px 36px rgba(0,0,0,.15);
+  } */
+  
+  .form_input:focus + .form_label {
+    top: -0.5rem;
+    left: 0.8rem;
+    color: inherit;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    z-index: 10;
+  }
+  
+  .text_area:focus + .form_label {
+    top: -0.5rem;
+    left: 0.8rem;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 500;
+    z-index: 10;
+  }
+  
+  .form_input:not(:placeholder-shown).form_input:not(:focus) + .form_label {
+    top: -0.5rem;
+    left: 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    z-index: 10;
+  }
+  
+  .text_area:not(:placeholder-shown).text_area:not(:focus) + .form_label {
+    top: -0.5rem;
+    left: 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    z-index: 10;
+  }
+  
+  .form_input:focus {
+    border: 1.5px solid #1a73e8;
+  }
+  
+  .text_area:focus {
+    border: 1.5px solid #1a73e8;
+  }
+  
+/* header */
+
+ .nav{
+     position: fixed;
+     top: 0;
+     display: flex;
+     justify-content: space-around;
+     width: 100%;
+     height: 100px;
+     line-height: 100px;
+     /*background: linear-gradient(rgba(39,39,39, 0.6), transparent);*/
+     background: transparent;
+     z-index: 100;
+   }
+   .nav-logo p{
+     color: white;
+     font-size: 25px;
+     font-weight: 600;
+   }
+   .nav-menu ul{
+     display: flex;
+   }
+   .nav-menu ul li{
+     list-style-type: none;
+   }
+   .nav-menu ul li .link{
+     text-decoration: none;
+     font-weight: 500;
+     color: white;
+     padding-bottom: 15px;
+     margin: 0 10px;
+   }
+   .link:hover, .active{
+     border-bottom: 2px solid #fff;
+     cursor:pointer;
+   }
+   .nav-button .btn{
+     width: 130px;
+     height: 40px;
+     background: #3E8EDE;
+     border: none;
+     border-radius: 30px;
+     cursor: pointer;
+     transition: .3s ease;
+     font-size: 20px; 
+     font-weight: bold;
+     color: white;
+   }
+   .btn:hover{
+     background: rgba(255, 255, 255, 0.3);
+     cursor:pointer;
+   }
+   
+   .nav-logo {
+       display: flex;
+       align-items: center; /* Align items vertically */
+   }
+   
+   .nav-logo img {
+       width: 70px; /* Adjust the width of the logo as needed */
+       margin-right: 10px; /* Add some spacing between the logo and text */
+       margin-top: -10px;
+   }
+   
+/* Footer */
+   
+ footer {
+     background-color: black;
+     color: white;
+     padding: 20px;
+     position: relative; /* Required for absolute positioning */
+ }
+
+ .footer-content {
+     position: relative; /* Change to relative positioning */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .company-logo {
+     position: absolute;
+     top: 70px; /* Adjust the top position to move the company logo upwards */
+     left: 40%; /* Adjust the left position to center the logo horizontally */
+     transform: translateX(-50%);
+ }
+
+ .company-logo img {
+     width: 200px !important; /* Adjust size as needed */
+     height: auto !important; /* Maintain aspect ratio */
+ }
+
+ .company-details {
+     text-align: left;
+     margin-top: 80px; /* Adjust the margin-top as needed */
+ }
+
+ .social-media {
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
+
+ .social-icons {
+     list-style: none;
+     padding: 10;
+     margin-left: 10px;
+     margin-top: -120px;
+ }
+
+ .social-icons li {
+     display: inline-block;
+     margin: 0 10px;
+ }
+
+ .social-media img {
+     width: 30px; /* Adjust the width as needed */
+     height: auto; /* Maintain aspect ratio */
+     margin-top: 100px;
+ }
+
+ .slogan {
+     position: absolute; /* Position the slogan relative to the parent company-logo */
+     bottom: -40px; /* Adjust the distance from the logo */
+     left: 35%; /* Center the text horizontally */
+     transform: translateX(-15%); /* Center the text horizontally */
+     color: white;
+     font-weight: bold;
+ }
+
+ .copyright {
+     text-align: center;
+     margin-top: 20px;
+ }
+
+ .left-section {
+     display: flex;
+     align-items: center;
+     margin-left: 600px;
+ }
+
+ .terms-link {
+     text-decoration: none;
+     color: white; /* Choose your desired link color */
+     margin-right: 20px; /* Adjust the spacing between the link and the text */
+     /*padding-left: 20px;*/
+ }
+
+ .header-links {
+     margin-top:150px;
+     margin-left:450px;
+ }
+
+
+

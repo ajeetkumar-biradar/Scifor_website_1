@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  background-color: black;
+   }
+   
+
+    .nav{
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+      z-index: 100;
+    }
+    .nav-logo p{
+      color: white;
+      font-size: 25px;
+      font-weight: 600;
+    }
+    .nav-menu ul{
+      display: flex;
+    }
+    .nav-menu ul li{
+      list-style-type: none;
+    }
+    .nav-menu ul li .link{
+      text-decoration: none;
+      font-weight: 500;
+      color: #fff;
+      padding-bottom: 15px;
+      margin: 0 25px;
+    }
+    .link:hover, .active{
+      border-bottom: 2px solid #fff;
+      cursor:pointer;
+    }
+    .nav-button .btn{
+      width: 130px;
+      height: 40px;
+      font-weight: 500;
+      background:#3E8EDE;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: .3s ease;
+    }
+    .btn:hover{
+      background: rgba(255, 255, 255, 0.3);
+      cursor:pointer;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center; /* Align items vertically */
+    }
+    
+    .nav-logo img {
+      width: 70px; /* Adjust the width of the logo as needed */
+      margin-right: 10px; /* Add some spacing between the logo and text */
+      margin-top: -10px;
+    }
+    .services h1 {
+      color: transparent;
+      font-size: 5rem;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: transparent;
+      letter-spacing: 4px;
+      background: linear-gradient(9deg, rgb(244, 251, 244) 0%, rgb(85, 73, 121) 41%, rgb(37, 1, 41) 100%);
+      background-clip: text;
+      margin-bottom: 20px;
+      display: inline-block;
+      position: relative;
+      text-align: center; /* Center the text */
+      width: 100%; /* Ensure full width */
+      padding-top: 150px;
+  }
+  
+  .services h1 span {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-60%);
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: #6d0c0c;
+      animation: anim 5s linear infinite;
+  }      
+
+
+.case-study {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.case-study-item {
+width: calc(100% - 10px);
+background-color: #bfe5e8;
+border-radius: 10px;
+padding: 20px;
+margin-bottom: 20px;
+display: flex;
+position: relative;
+justify-content: flex-start; /* Align items to the start (left side) */
+}
+
+.case-study-content {
+width: 80%; /* Adjust this width as needed */
+position: relative; 
+}
+
+.case-study-content img {
+width: 300px; /* Set a fixed width */
+height: 150px; /* Set a fixed height */
+object-fit: cover; /* Maintain aspect ratio and cover the container */
+border-radius: 10px;
+opacity: 0.9;
+}
+
+.text-overlay {
+position: absolute;
+top: 10px;
+left: 32px;
+background-color: rgba(255, 255, 255, 0);
+padding: 5px 10px;
+border-radius: 5px;
+font-weight: bold;
+color: white;
+}
+
+.case-study-details {
+padding-left: 20px; /* Adjust as needed */
+flex-grow: 1;
+}
+
+.case-study-details p {
+margin-bottom: 10px;
+text-align: justify;
+}
+
+.read-more-btn {
+display: inline-block;
+padding: 5px 10px;
+background-color: #3E8EDE;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+}
+
+.additional-content {
+  display: none;
+  width: 100%;
+  background-color: #f9f9f9; /* Adjust background color as needed */
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.floating-container{
+  position: fixed;
+  width : 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  margin: 35px 25px;
+}
+
+button {
+  border: none;
+  background: #3E8EDE;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: .4s;
+}
+@media (max-width: 700px) {
+  .case-study{
+    margin:20px;
+    align-items: center;
+  }
+  .case-study-item {
+      flex-direction: column; /* Stack content vertically */
+      align-items: center; /* Center content */
+  }
+
+  .case-study-content {
+      width: 100%; /* Full width for images */
+  }
+
+  .case-study-details {
+      padding-top: 20px; /* Add space between image and details */
+      text-align: center;
+      margin-right: 10px; /* Center text */
+  }
+
+  .read-more-btn {
+      margin-top: 10px; /* Add space above button */
+  }
+}
+
+@media (max-width: 600px) {
+.case-study{
+  margin:20px;
+  align-items: center;
+}
+  .case-study-item {
+      padding: 10px; /* Reduce padding */
+  }
+
+  .case-study-content img {
+      width: 100%; /* Full width for images */
+      height: auto; /* Maintain aspect ratio */
+  }
+  .case-study-details {
+    padding-top: 20px; /* Add space between image and details */
+    text-align: center;
+    margin-right: 10px; /* Center text */
+}
+
+  .read-more-btn {
+      padding: 5px 10px; /* Reduce button padding */
+      font-size: 14px; /* Reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .case-study-details p {
+      font-size: 16px; /* Reduce font size */
+  }
+
+  .read-more-btn {
+      padding: 5px 8px; /* Further reduce button padding */
+      font-size: 12px; /* Further reduce font size */
+  }
+
+  button {
+      padding: 10px 20px; /* Reduce button padding */
+      font-size: 14px; /* Reduce button font size */
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  position: relative; /* Required for absolute positioning */
+}
+
+.footer-content {
+  position: relative; /* Change to relative positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo {
+  position: absolute;
+  top: 70px; /* Adjust the top position to move the company logo upwards */
+  left: 40%; /* Adjust the left position to center the logo horizontally */
+  transform: translateX(-50%);
+}
+
+.company-logo img {
+  width: 200px !important; /* Adjust size as needed */
+  height: auto !important; /* Maintain aspect ratio */
+}
+
+.company-details {
+  text-align: left;
+  margin-top: 80px; /* Adjust the margin-top as needed */
+}
+
+.social-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 10;
+  margin-left: 10px;
+  margin-top: -120px;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 30px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 100px;
+}
+
+.slogan {
+  position: absolute; /* Position the slogan relative to the parent company-logo */
+  bottom: -40px; /* Adjust the distance from the logo */
+  left: 35%; /* Center the text horizontally */
+  transform: translateX(-15%); /* Center the text horizontally */
+  color: white;
+  font-weight: bold;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.terms-link {
+  text-decoration: none;
+  color: white; /* Choose your desired link color */
+  margin-right: 30px; /* Adjust the spacing between the link and the text */
+}
+
+.header-links {
+  margin-top:150px;
+  margin-left:450px;
+}

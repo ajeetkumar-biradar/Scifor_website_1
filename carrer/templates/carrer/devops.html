@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>DEVOPS</title> 
+        
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="{% static 'company_logo.png' %}" alt="Company Logo">
+                <p style="font-size: 28px; font-weight: bold;">Meta Scifor Technologies</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a onclick="window.location.href='/'" class="link ">Home</a></li>
+                    <li><a onclick="window.location.href='/services'" class="link active">Services</a></li>
+                    <li><a onclick="window.location.href='/about-us'" class="link">About</a></li>
+                    <li><a onclick="window.location.href='/case_study'" class="link">Case Studies</a></li>
+                    <li><a href="#footer" class="link">Contact</a></li>
+                    <li><a href="/carrer" class="link">Join Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+
+
+        
+        <div class="container_">
+            <img src="{% static 'dev_img.jpg' %}" height="900" width="100%">
+            <div class="overlay left">
+                <h2 class="first-set" id="service_name" style="font-weight: bold;">DEVOPS</h2>
+            </div>
+        </div>
+
+        <section class="hidden">
+            <div class="container">
+                <img src="{% static 'dev_img1.jpg' %}" width="500" height="500">
+                <div class="text">
+                    <h1 id="why_title" class="title_" style="font-weight: bold;"></h1>
+                    <p id="service_description" style="text-align: justify;">Seamless collaboration between development and operations teams. Automated continuous integration and deployment for rapid delivery of updates. Enhanced stability and reliability through automated testing and infrastructure as code. Improved efficiency and scalability by optimizing resource utilization and scaling infrastructure as needed.  Continuous monitoring and feedback loops for ongoing improvement and customer satisfaction.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hidden" >
+            <!-- <div container> -->
+            <div class="text-box">
+            <h2 class="title" style="font-weight: bold;">  OVERVIEW</h2>
+            <p id="service_overview" style="text-align: justify;">Implementing DevOps practices at SciFor Technology revolutionizes its software development process by fostering seamless collaboration between development and operations teams. Through automated continuous integration and deployment pipelines, SciFor achieves rapid and reliable delivery of updates, enhancing its agility and responsiveness to market demands. By embracing DevOps principles such as infrastructure as code and automated testing, SciFor ensures the stability and reliability of its platform, minimizing downtime and disruptions. Furthermore, DevOps enables SciFor to optimize resource utilization, scale infrastructure as needed, and efficiently manage its operations, enhancing overall efficiency and scalability. Continuous monitoring and feedback loops allow SciFor to gather insights into system performance and user experience, enabling continuous improvement and ensuring high levels of customer satisfaction. Overall, DevOps serves as a catalyst for innovation and growth at SciFor, empowering the company to deliver cutting-edge solutions and stay ahead in the competitive landscape of scientific research technology.</p>
+            </div>
+            <!-- </div> -->
+
+        </section>
+        
+
+        <section class="hidden">
+            <div class="container">
+                <div class="text">
+                    <h2 class="title_" style="font-weight: bold;">EXPERTISE AND SOLUTIONS</h2>
+                    <ul id="service_expertise" style="text-align: justify;">Deep Industry Knowledge:Our team possesses extensive expertise across various industries, enabling us to understand the unique challenges and requirements of different sectors. Tailored Solutions: We provide customized solutions designed to address the specific needs and objectives of each client, ensuring maximum effectiveness and value. Cutting-edge Technologies: Leveraging the latest tools and technologies, we deliver innovative solutions that drive efficiency, productivity, and competitiveness for our clients. With a history of successful projects and satisfied clients, we have established ourselves as a trusted partner for organizations seeking expert solutions and reliable implementation. Commitment to Excellence: Our dedication to excellence drives us to continually refine our processes, stay ahead of industry trends, and deliver exceptional results that exceed client expectations.</ul>
+                </div>
+                <img src="{% static 'dev_img1.jpg' %}" width="500" height="500">
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <footer>
+            <div id="footer" class="footer-content">
+                <div class="social-media">
+                    <!-- Company logo -->
+                    <a href="/" id="company-logo">
+                    <img src="{% static 'emplo.png' %}" alt="Logo" class="company-logo" style="width: 150px; height: auto;">
+                    </a>
+                    <p class="slogan" style="margin-bottom: 140px; margin-left:-45px;">Script. Sculpt. Socialize!</p>
+                    
+                    <div class="header-links">
+                        <h3 style= "color: #3E8EDE; font-size: 25px; font-weight: bold;">LINKS</h3>
+                        <h3 style="font-size: 15px; font-weight: bold;cursor: pointer;"><a href="/" style="color: inherit; text-decoration: none;">HOME</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold;cursor: pointer;"><a onclick="window.location.href='/services'" target="_blank" style="color: inherit; text-decoration: none;">SERVICES</h3>
+                        <h3 style= "font-size: 15px; font-weight: bold;cursor: pointer;"><a href="About.html" target="_blank" style="color: inherit; text-decoration: none;">ABOUT</h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold;"><a onclick="window.location.href='/case_study'" target="_blank" style="color: inherit; text-decoration: none;">CASE STUDIES</a></h3>
+                        <h3 style= "font-size: 15px; font-weight: bold;"><a href="#footer" style="color: inherit; text-decoration: none;">CONTACT</a></h3>
+                            <h3 style= "font-size: 15px; font-weight: bold;"><a href="JoinUs.html" target="_blank" style="color: inherit; text-decoration: none;">JOIN US</a></h3>
+                    </div>
+                    
+                    <!-- Social media icons -->
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg" target="_blank"><img src="{% static 'fb.png' %}" alt="Facebook"></a></li>
+                <li><a href="#"><img src="{% static 'twitter.png' %}" alt="Twitter"></a></li>
+                <li><a href="https://www.linkedin.com/company/scifortechnologies/" target="_blank"><img src="{% static 'linkedin.png' %}" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="{% static 'wp.png' %}" alt="Whatsapp"></a></li>
+                <li><a href="#"><img src="{% static 'youtube.png' %}" alt="Youtube"></a></li>
+                <li><a href="https://www.instagram.com/metascifortechnologies?igsh=MXVwbXdodm5pYWFqNA==" target="_blank"><img src="{% static 'instagram.png' %}" alt="LinkedIn"></a></li>
+                <!-- Add more social media icons as needed -->
+            </ul>
+        </div>
+                <div class="company-details">
+                    <h2 style= "color: #3E8EDE; font-size: 40px; font-weight: bold; margin-left: 300px;">CONTACT US</h2>
+                    <h3 style= "font-size: 30px; font-weight: bold; margin-left: 300px;">Meta Scifor Technologies</h3>
+                    <p style= "margin-left: 300px;">Address: No.13-14, 2nd floor, Kothnur Main Rd</p>
+                    <p style= "margin-left: 300px;">JP Nagar 7th Phase, Bengaluru</p>
+                    <p style= "margin-left: 300px;">Karnataka 560078S</p>
+                    <p style= "margin-left: 300px;">Email: info@scifortechnologies.com</p>
+                    <p style= "margin-left: 300px;">Phone: +916235187933</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p style= "color: #3E8EDE; margin-left: 70px; font-size: 15px;">&copy; 2024 Meta Scifor Technologies. All Rights Reserved.</p>
+            </div>
+            <div class="copyright">
+                <a href="#" class="terms-link" style= "color: #3E8EDE; font-size: 15px;">Terms & Conditions</a>
+            </div>
+        </footer>
+
+
+
+        
+        <script src="/static/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  
+    </body>
+</html>

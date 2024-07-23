@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ article.title }} - Scifor Technologies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'page.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url("/static/image1.jpg");
+        }
+        .article-container {
+            background-color: #171717;
+            margin: 100px auto;
+            padding: 20px;
+            width: 70%;
+            border-radius: 10px;
+            color: #fff;
+        }
+        .article-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .article-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+        .article-author {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .article-date {
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<nav class="nav">
+    <div class="nav-logo">
+        <img src="{% static 'company_logo.png' %}" alt="Company Logo">
+        <p style="font-size: 28px; font-weight: bold;">Meta Scifor Technologies</p>
+    </div>
+    <div class="nav-menu" id="navMenu">
+        <ul>
+            <li><a onclick="window.location.href='/'" class="link" style="font-size: 20px; font-weight: bold;">Home</a></li>
+            <li><a onclick="window.location.href='/services'" class="link" style="font-size: 20px; font-weight: bold;">Services</a></li>
+            <li><a onclick="window.location.href='/about-us'" class="link" style="font-size: 20px; font-weight: bold;">About</a></li>
+            <li><a onclick="window.location.href='/case_study'" class="link" style="font-size: 20px; font-weight: bold;">Case Studies</a></li>
+            <li><a href="#footer" class="link" style="font-size: 20px; font-weight: bold;">Contact</a></li>
+            <li><a onclick="window.location.href='/community'" class="link active" style="font-size: 20px; font-weight: bold;">Community</a></li>
+            <li><a onclick="window.location.href='/carrer'" class="link" style="font-size: 20px; font-weight: bold;">Join Us</a></li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="article-container">
+    <img src="{{ article.headline_image.url }}" alt="Article Image">
+    <h1 class="article-title">{{ article.title }}</h1>
+    <p class="article-author">by <span style="font-weight: 500;">Scifor Technologies</span></p>
+    <p class="article-date">{{ article.created_on|date:"F j, Y" }}</p>
+    <div class="article-content">{{ article.content|safe }}</div>
+    <a href="javascript:history.back()" class="back-link">Back to Community Engagement</a>
+</div>
+
+
+    <footer>
+            <div id="footer" class="footer-content">
+                <div class="social-media">
+                    <!-- Company logo -->
+                    <a href="/" id="company-logo">
+                    <img src="{% static 'emplo.png' %}" alt="Logo" class="company-logo" style="width: 150px; height: auto;">
+                    </a>
+                    <p class="slogan" style="margin-bottom: 140px; margin-left:-45px;">Script. Sculpt. Socialize!</p>
+
+                    <div class="header-links">
+                        <h3 style= "color: #3E8EDE; font-size: 25px; font-weight: bold;">LINKS</h3>
+                        <h3 style="color: white; font-size: 15px; font-weight: bold;"><a href="#" style="color: inherit; text-decoration: none;">HOME</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold; cursor: pointer;"><a onclick="window.location.href='/services'" target="_blank" style="color: inherit; text-decoration: none;">SERVICES</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold; cursor: pointer;"><a onclick="window.location.href='/about-us'" target="_blank" style="color: inherit; text-decoration: none;">ABOUT</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold; cursor: pointer;"><a onclick="window.location.href='/case_study'" target="_blank" style="color: inherit; text-decoration: none;">CASE STUDIES</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold;"><a href="#footer" style="color: inherit; text-decoration: none;">CONTACT</a></h3>
+                        <li><a onclick="window.location.href='/carrer'" class="link" style="font-size: 20px; font-weight: bold;">Join Us</a></li>
+                    </div>
+
+                    <!-- Social media icons -->
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg" target="_blank"><img src="{% static 'fb.png' %}" alt="Facebook"></a></li>
+                <li><a href="#"><img src="{% static 'twitter.png' %}" alt="Twitter"></a></li>
+                <li><a href="https://www.linkedin.com/company/scifortechnologies/" target="_blank"><img src="{% static 'linkedin.png' %}" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="{% static 'wp.png' %}" alt="Whatsapp"></a></li>
+                <li><a href="#"><img src="{% static 'youtube.png' %}" alt="Youtube"></a></li>
+                <li><a href="https://www.instagram.com/metascifortechnologies?igsh=MXVwbXdodm5pYWFqNA==" target="_blank"><img src="{% static 'instagram.png' %}" alt="LinkedIn"></a></li>
+                <!-- Add more social media icons as needed -->
+            </ul>
+        </div>
+                <div class="company-details">
+                    <h2 style= "color: #3E8EDE; font-size: 40px; font-weight: bold; margin-left: 300px;">CONTACT US</h2>
+                    <h3 style= "font-size: 30px; font-weight: bold; margin-left: 300px;">Meta Scifor Technologies</h3>
+                    <p style= "margin-left: 300px;">Address: No.13-14, 2nd floor, Kothnur Main Rd</p>
+                    <p style= "margin-left: 300px;">JP Nagar 7th Phase, Bengaluru</p>
+                    <p style= "margin-left: 300px;">Karnataka 560078S</p>
+                    <p style= "margin-left: 300px;">Email: info@scifortechnologies.com</p>
+                    <p style= "margin-left: 300px;">Phone: +916235187933</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p style= "color: #3E8EDE; margin-left: 70px; font-size: 15px;">&copy; 2024 Meta Scifor Technologies. All Rights Reserved.</p>
+            </div>
+            <div class="copyright">
+                <a href="#" class="terms-link" style= "color: #3E8EDE; font-size: 15px;">Terms & Conditions</a>
+            </div>
+        </footer>
+</main>
+
+    <script>
+        function changeCategory(category) {
+            const url = new URL(window.location);
+            url.searchParams.set('category', category);
+            window.location = url.href;
+        }
+    </script>
+</body>
+</html>

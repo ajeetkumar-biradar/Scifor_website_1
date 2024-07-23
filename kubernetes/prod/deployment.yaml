@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: career-page-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: career-page
+  template:
+    metadata:
+      labels:
+        app: career-page
+    spec:
+      containers:
+      - name: career-page-container
+        image: gcr.io/terraform-poc-410807/career-page.git:latest
+        ports:
+        - containerPort: 8888
+
+        resources:
+            limits:
+              cpu: "0.5"  # 0.5 CPU cores
+              memory: "512Mi"  # 512 Megabytes
+            requests:
+              cpu: "0.2"  # 0.2 CPU cores
+              memory: "256Mi"  # 256 Megabytes

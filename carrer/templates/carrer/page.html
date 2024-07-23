@@ -1,0 +1,837 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scifor Technologies</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include the Slick carousel styles -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link rel="stylesheet" href="{% static 'page.css' %}" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <style>
+      body {
+        margin-top: 100px;
+        background-image: url("/static/image1.jpg"); /* Set the background image for the entire page */
+      }
+
+      .nav-link {
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff !important;
+        margin: 0 5px;
+        padding-bottom: 15px;
+        position: relative;
+      }
+
+      .nav-link:hover,
+      .active {
+        border-bottom: 2px solid #fff;
+        cursor: pointer;
+      }
+      .navbar-brand img{
+        margin-left: 30px;
+      }
+
+      .navbar-brand p {
+        margin: 0;
+        font-size: 28px;
+        font-weight: bold;
+        color: white"
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+
+      @media (max-width: 990px) {
+        .navbar-collapse {
+          justify-content: flex-end;
+        }
+        .navbar-nav {
+          text-align: right;
+        }
+
+        .nav-item {
+          margin: 0;
+        }
+
+        .nav-link {
+          padding: 10px 0;
+          display: block;
+        }
+      }
+      @media (max-width: 500px) {
+        .navbar {
+          margin: 5px;
+        }
+        .navbar-brand img {
+          margin-left: 2px;
+          width: 40;
+        }
+        .navbar-brand p {
+          font-size: 20px;
+          margin: 0;
+        }
+        .navbar-toggler {
+          margin-right: 0;
+        }
+        .flip-card {
+          /* display: grid; */
+          /* grid-template-columns: repeat(1, 1fr); */
+          width: 100%;
+        }
+      }
+
+      .footer {
+        background-color: #000;
+        color: white;
+      }
+      .footer .footer-title {
+        color: #3e8ede;
+      }
+      .footer .social-icons a {
+        font-size: 1.5em;
+        margin-right: 10px;
+        text-decoration: none;
+      }
+      .footer .social-icons img {
+        width: 30px;
+        height: auto;
+      }
+    </style>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+
+  <body>
+    <!--<nav class="nav">
+      <div class="nav-logo">
+        <img src="{% static 'company_logo.png' %}" alt="Company Logo" />
+        <p style="font-size: 28px; font-weight: bold">
+          Meta Scifor Technologies
+        </p>
+      </div>
+      <div class="nav-menu" id="navMenu">
+        <ul>
+          <li>
+            <a
+              onclick="window.location.href='/'"
+              class="link active"
+              style="font-size: 20px; font-weight: bold"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="window.location.href='/services'"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="window.location.href='/about-us'"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="window.location.href='/case_study'"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >Case Studies</a
+            >
+          </li>
+          <li>
+            <a
+              href="#footer"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="window.location.href='/community'"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >Community</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="window.location.href='/carrer'"
+              class="link"
+              style="font-size: 20px; font-weight: bold"
+              >Join Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000">
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <img src="{% static 'images/Meta Scifor Icon.png' %}" width="60px" alt="Company Logo"/>
+        <p class="m-2">Meta Scifor Technologies</p>
+      </a>
+      <button class="navbar-toggler mr-5 p-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about-us">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/case_study">Case Studies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="/community">Community</a></li>
+          <li class="nav-item"><a class="nav-link" href="/career">Join Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="slider">
+        <div class="slide">
+          <img src="{% static 'back.jpeg' %}" alt="Image 1" />
+          <div class="overlay">
+            <h2 class="big-text">Pioneering Tech</h2>
+            <h2 class="big-text">for a Brighter</h2>
+            <h2 class="big-text">Future.</h2>
+            <p class="small-text">Script. Sculpt. Socialize</p>
+          </div>
+        </div>
+        <div class="slide" id="services-slide">
+          <img src="{% static 'back01.jpeg' %}" alt="Image 2" />
+          <!-- Second slide with random quotes and typing effect -->
+          <div class="overlay">
+            <h2 class="big-text" style="font-size: 20px; text-align: center; font-weight: bold" >
+              Embracing future technologies
+            </h2>
+            <h2 class="big-text" style="font-size: 20px; text-align: center; font-weight: bold" >
+              isn't just an option; it's the
+            </h2>
+            <h2 class="big-text" style="font-size: 20px; text-align: center; font-weight: bold" >
+              cornerstone of Meta Scifor Technologies'
+            </h2>
+            <h2 class="big-text" style="font-size: 20px; text-align: center; font-weight: bold" >
+              evolution, propelling us into a realm
+            </h2>
+            <h2 class="big-text" style="font-size: 20px; text-align: center; font-weight: bold" >
+              where innovation shapes the very
+            </h2>
+            <h2 class="big-text" style="font-size: 20px; text-align: center; font-weight: bold" >
+              fabric of our success.
+            </h2>
+            <div id="quote-container" class="quote-text">
+              <!-- Quotes will be dynamically added here -->
+            </div>
+          </div>
+        </div>
+        <div class="slide" id="expertise-slide">
+          <img src="{% static 'back02.jpeg' %}" alt="Image 3" />
+          <!-- Third slide with random quotes and custom effects -->
+          <div class="overlay">
+            <h2 class="big-text" style="color: white; font-size: 20px; text-align: center; font-weight: bold;">
+              At Scifor, AI isn't just a tool;
+            </h2>
+            <h2 class="big-text" style="color: white; font-size: 20px; text-align: center; font-weight: bold;">
+              it's the heartbeat of our innovation.
+            </h2>
+            <h2 class="big-text" style="color: white; font-size: 20px; text-align: center; font-weight: bold;">
+              We infuse every solution with AI, elevating
+            </h2>
+            <h2 class="big-text" style="color: white; font-size: 20px; text-align: center; font-weight: bold;">
+              our capabilities and empowering our clients
+            </h2>
+            <h2 class="big-text" style="color: white; font-size: 20px; text-align: center; font-weight: bold;">
+              to navigate the ever-changing landscape
+            </h2>
+            <h2 class="big-text" style="color: white; font-size: 20px; text-align: center; font-weight: bold;">
+              with confidence.
+            </h2>
+            <div class="quote-effect-container">
+              <p
+                class="quote-text"
+                style="color: #fff; font-size: 24px; font-weight: bold"
+              ></p>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="{% static 'back03.jpeg' %}" alt="Image 4" />
+          <div class="overlay">
+            <h2 class="big-text">Testimonials and Blogs</h2>
+            <p class="small-text">Uploading soon</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="services">
+      <div class="container">
+        <h2 class="main-title">OUR SERVICES FOR YOUR DIGITAL SUCCESS</h2>
+        <div class="content-flip">
+          <div class="flip-card" style="flex: 0 0 30%">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="image">
+                  <img src="{% static 'mobile.jpeg' %}" alt="" />
+                  <h3>Mobile App Development</h3>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h3>Mobile App Development</h3>
+                <p>
+                  Extensively researched mobile app development for Android,
+                  iOS, and wearable technology
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card" style="flex: 0 0 30%">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="image">
+                  <img src="{% static 'soft.jpeg' %}" alt="" />
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h3>Software Development</h3>
+                <p>
+                  Technology-driven, result-oriented software solutions","We
+                  develop technology-driven, and result-oriented software
+                  solutions for you to gain a competitive edge.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card" style="flex: 0 0 30%">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="image">
+                  <img src="{% static 'ai.jpg' %}" alt="" />
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <h3>AI/ML Development</h3>
+                <p>
+                  Innovative artificial intelligence and machine learning
+                  solutions,Our innovative artificial intelligence and machine
+                  learning solutions will bring advancement to your business.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="button"
+          onclick="window.location.href='/services'"
+        >
+          View More
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h3 class="main-title">WHY CHOOSE US</h3>
+        <div class="section-title">
+          <div class="content">
+            <div class="media-info">
+              <li>
+                <h4>Tailored Digital Experiences</h4>
+                <p>
+                  We specialize in crafting websites that deliver tailored
+                  digital experiences, engaging users effectively while ensuring
+                  seamless functionality and visual appeal.
+                </p>
+              </li>
+              <li>
+                <h4>Technical Expertise</h4>
+                <p>
+                  With deep technical expertise, we build cutting-edge websites
+                  using the latest tools and technologies, backed by a
+                  commitment to excellence.
+                </p>
+              </li>
+              <li>
+                <h4>Trustworthy Support</h4>
+                <p>
+                  Additionally, our dedicated team provides trustworthy support,
+                  offering prompt assistance and effective solutions to ensure
+                  your success.
+                </p>
+              </li>
+            </div>
+            <div class="image">
+              <img src="{% static 'whyus.jpg' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="main-title">OUR SUCCESSFUL PROJECTS</h2>
+        <div class="content-flip">
+          <div class="case-study-tiles">
+            {% for case_study in case_studies %}
+            <div class="case-study-tile">
+              <h3 class="case-study-title" style="color: white; text-align: center" >
+                {{ case_study.case_study }}
+              </h3>
+              <p style="color: white; text-align: center">
+                {{ case_study.short_desc }}
+              </p>
+            </div>
+            {% endfor %}
+            <!-- Common View More Button  -->
+          </div>
+        </div>
+        <button type="button" class="button" onclick="window.location.href='/case_study'" >
+          View More
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="main-title" style="font-weight: bold">TECH STACKS</h3>
+      <div class="logos" style="border-radius: 15px;">
+        <div class="logos-slide">
+          <img src="{% static 'dj.png' %}" alt="" />
+          <img src="{% static 'c.png' %}" alt="" />
+          <img src="{% static 'flask.png' %}" alt="" />
+          <img src="{% static 'js.png' %}" alt="" />
+          <img src="{% static 'keras.png' %}" alt="" />
+          <img src="{% static 'numpy.png' %}" alt="" />
+          <img src="{% static 'pandas.png' %}" alt="" />
+          <img src="{% static 'python.png' %}" alt="" />
+          <img src="{% static 'tensorflow.png' %}" alt="" />
+        </div>
+
+        <div class="logos-slide">
+          <img src="{% static 'dj.png' %}" alt="" />
+          <img src="{% static 'c.png' %}" alt="" />
+          <img src="{% static 'flask.png' %}" alt="" />
+          <img src="{% static 'js.png' %}" alt="" />
+          <img src="{% static 'keras.png' %}" alt="" />
+          <img src="{% static 'numpy.png' %}" alt="" />
+          <img src="{% static 'pandas.png' %}" alt="" />
+          <img src="{% static 'python.png' %}" alt="" />
+          <img src="{% static 'tensorflow.png' %}" alt="" />
+        </div>
+      </div>
+
+      <!-- Promo Section "Statistics" -->
+      <div class="promo-statistics" style="padding-top: 50px">
+        <div class="stat-item">
+          <span>27+</span>
+          <br />Employees
+        </div>
+        <div class="stat-item">
+          <span>14+</span>
+          <br />Clients
+        </div>
+        <div class="stat-item">
+          <span>23+</span>
+          <br />Projects Completed
+        </div>
+        <div class="stat-item">
+          <span>43+</span>
+          <br />Satisfied Reviews
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h3 class="main-title">TESTIMONIALS</h3>
+      <div class="testimonial mySwiper">
+        <div class="testi-content swiper-wrapper">
+          {% for testimonial in testimonials %}
+          <div class="slide1 swiper-slide">
+            <button
+              class="testimonial-button"
+              onclick="window.location.href='{{ testimonial.linkedin }}'"
+            >
+              <img
+                class="image"
+                src="{{ testimonial.image.url }}"
+                alt="Customer Profile"
+              />
+            </button>
+            <p style="color: #fff">{{ testimonial.testimonial }}</p>
+            <i class="bx bxs-quote-alt-left quote-icon"></i>
+            <div class="details">
+              <span class="name">{{ testimonial.name }}</span>
+              <span class="job">{{ testimonial.job }}</span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button-next nav-btn"></div>
+        <div class="swiper-button-prev nav-btn"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section>
+      <div style="padding-top: 50px">
+        <h3 class="main-title" style="font-weight: bold">OUR CLIENTS</h3>
+        <div class="logos" style="border-radius: 15px;">
+          <div class="logos-slide">
+            <img src="{% static 'client1.png' %}" />
+            <img src="{% static 'client2.png' %}" />
+            <img src="{% static 'client3.png' %}" />
+            <img src="{% static 'client4.png' %}" />
+            <img src="{% static 'client5.png' %}" />
+            <img src="{% static 'client6.png' %}" />
+            <img src="{% static 'client7.png' %}" />
+            <img src="{% static 'client8.png' %}" />
+            <img src="{% static 'client9.png' %}" />
+            <img src="{% static 'client10.png' %}" />
+            <img src="{% static 'client11.png' %}" />
+          </div>
+          <div class="logos-slide">
+            <img src="{% static 'client1.png' %}" />
+            <img src="{% static 'client2.png' %}" />
+            <img src="{% static 'client3.png' %}" />
+            <img src="{% static 'client4.png' %}" />
+            <img src="{% static 'client5.png' %}" />
+            <img src="{% static 'client6.png' %}" />
+            <img src="{% static 'client7.png' %}" />
+            <img src="{% static 'client8.png' %}" />
+            <img src="{% static 'client9.png' %}" />
+            <img src="{% static 'client10.png' %}" />
+            <img src="{% static 'client11.png' %}" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top: 50px" id="meetus">
+      <!-- Get in Touch -->
+      <div id="inquiry-form" class="get-in-touch-container">
+        <div class="headline">Connect with us!</div>
+        <img src="{% static 'getin.jpg' %}" alt="Inquiry Form" />
+        <div class="form-overlay">
+          <form action="/submit-form" method="post" target="_blank">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Company Email" required />
+            <input type="tel" name="phone" placeholder="Mobile Number" required />
+            <textarea name="inquiry" placeholder="Inquiry" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer mt-5py-3">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-lg-6 mb-2">
+            <div style="display: flex; align-items: center;">
+              <a href="/" id="company-logo" class="text-decoration-none">
+              <img
+                src="{% static 'images/Meta Scifor Icon.png' %}"
+                alt="Logo"
+                class="img-fluid"
+                style="width: 80px; height: auto;"
+              />
+            </a>
+            <div>
+              
+              <span class="fw-bold" style="font-size: 20px; display: block;">Meta</span>
+              <span class="fw-bold" style="font-size: 20px;">Scifor Technologies</span>
+            </div>
+            </div>
+            <p class="fw-bold ms-4 mt-2" style="margin-bottom: 50px; font-size: 20px">
+              Script. Sculpt. Socialize!
+              <!--<img
+                src="{% static 'images/Meta Scifor Technologies.png' %}"
+                width="350"
+                height="80"
+                alt="Company Logo"
+              />-->
+            </p>
+            <div class="social-icons mt-4 ms-4">
+              <a
+                href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg"
+                target="_blank"
+              >
+                <img src="{% static 'fb.png' %}" alt="Facebook" />
+              </a>
+              <a href="#">
+                <img src="{% static 'twitter.png' %}" alt="Twitter" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/scifortechnologies/"
+                target="_blank"
+              >
+                <img src="{% static 'linkedin.png' %}" alt="LinkedIn" />
+              </a>
+              <a href="#">
+                <img src="{% static 'wp.png' %}" alt="Whatsapp" />
+              </a>
+              <a href="#">
+                <img src="{% static 'youtube.png' %}" alt="Youtube" />
+              </a>
+              <a
+                href="https://www.instagram.com/metascifortechnologies?igsh=MXVwbXdodm5pYWFqNA=="
+                target="_blank"
+              >
+                <img src="{% static 'instagram.png' %}" alt="Instagram" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h3 class="footer-title fw-bold mb-3">Links</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-white" style="text-decoration: none"
+                  >HOME</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="/services"
+                  class="text-white"
+                  style="text-decoration: none"
+                  target="_blank"
+                  >SERVICES</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="/about-us"
+                  class="text-white"
+                  style="text-decoration: none"
+                  target="_blank"
+                  >ABOUT</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="/case_study"
+                  class="text-white"
+                  style="text-decoration: none"
+                  target="_blank"
+                  >CASE STUDIES</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#footer"
+                  class="text-white"
+                  style="text-decoration: none"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  onclick="window.location.href='/carrer'"
+                  class="link"
+                  style="font-size: 20px; font-weight: bold"
+                  >Join Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-3">
+            <h3 class="footer-title fw-bold mb-3">CONTACT US</h3>
+            <p class="fw-bold display-6">Meta Scifor Technologies Pvt. Ltd.</p>
+            <p>No.13-14, 2nd floor, Kothnur Main Rd</p>
+            <p>JP Nagar 7th Phase, Bengaluru</p>
+            <p>Karnataka 560078</p>
+            <p>
+              Email:
+              <a href="mailto:info@scifortechnologies.com" class="text-white text-decoration-none"
+                >info@scifortechnologies.com</a
+              >
+              
+              <p>Email:
+                <a href="mailto:support@scifortechnologies.com" class="text-white text-decoration-none"
+                >support@scifortechnologies.com</a
+              >
+              </p>
+            </p>
+            <p>
+              Phone:
+              <a href="tel:+916235187933" class="text-white text-decoration-none"
+                >+916235187933, 7676646007</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <p>
+              &copy; 2024 Meta Scifor Technologies Pvt. Ltd. All Rights
+              Reserved.
+            </p>
+            <a href="#" class="text-white">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- <footer>
+            <div id="footer" class="footer-content">
+                <div class="social-media">
+                    <!-- Company logo -->
+    <!-- <a href="/" id="company-logo">
+                    <img src="{% static 'emplo.png' %}" alt="Logo" class="company-logo" style="width: 150px; height: auto;">
+                    </a>
+                    <p class="slogan" style="margin-bottom: 140px; margin-left:-45px;">Script. Sculpt. Socialize!</p>
+
+                    <div class="header-links">
+                        <h3 style= "color: #3E8EDE; font-size: 25px; font-weight: bold;">LINKS</h3>
+                        <h3 style="color: white; font-size: 15px; font-weight: bold;"><a href="#" style="color: inherit; text-decoration: none;">HOME</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold; cursor: pointer;"><a onclick="window.location.href='/services'" target="_blank" style="color: inherit; text-decoration: none;">SERVICES</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold; cursor: pointer;"><a onclick="window.location.href='/about-us'" target="_blank" style="color: inherit; text-decoration: none;">ABOUT</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold; cursor: pointer;"><a onclick="window.location.href='/case_study'" target="_blank" style="color: inherit; text-decoration: none;">CASE STUDIES</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold;"><a href="#footer" style="color: inherit; text-decoration: none;">CONTACT</a></h3>
+                        <li><a onclick="window.location.href='/carrer'" class="link" style="font-size: 20px; font-weight: bold;">Join Us</a></li>
+                    </div>
+
+                    <!-- Social media icons -->
+    <!-- <ul class="social-icons">
+                <li><a href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg" target="_blank"><img src="{% static 'fb.png' %}" alt="Facebook"></a></li>
+                <li><a href="#"><img src="{% static 'twitter.png' %}" alt="Twitter"></a></li>
+                <li><a href="https://www.linkedin.com/company/scifortechnologies/" target="_blank"><img src="{% static 'linkedin.png' %}" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="{% static 'wp.png' %}" alt="Whatsapp"></a></li>
+                <li><a href="#"><img src="{% static 'youtube.png' %}" alt="Youtube"></a></li>
+                <li><a href="https://www.instagram.com/metascifortechnologies?igsh=MXVwbXdodm5pYWFqNA==" target="_blank"><img src="{% static 'instagram.png' %}" alt="LinkedIn"></a></li>
+                <!-- Add more social media icons as needed -->
+    <!-- </ul>
+        </div>
+                <div class="company-details">
+                    <h2 style= "color: #3E8EDE; font-size: 40px; font-weight: bold; margin-left: 300px;">CONTACT US</h2>
+                    <h3 style= "font-size: 30px; font-weight: bold; margin-left: 300px;">Meta Scifor Technologies</h3>
+                    <p style= "margin-left: 300px;">Address: No.13-14, 2nd floor, Kothnur Main Rd</p>
+                    <p style= "margin-left: 300px;">JP Nagar 7th Phase, Bengaluru</p>
+                    <p style= "margin-left: 300px;">Karnataka 560078S</p>
+                    <p style= "margin-left: 300px;">Email: info@scifortechnologies.com</p>
+                    <p style= "margin-left: 300px;">Phone: +916235187933</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p style= "color: #3E8EDE; margin-left: 70px; font-size: 15px;">&copy; 2024 Meta Scifor Technologies. All Rights Reserved.</p>
+            </div>
+            <div class="copyright">
+                <a href="#" class="terms-link" style= "color: #3E8EDE; font-size: 15px;">Terms & Conditions</a>
+            </div>
+        </footer>-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="{% static 'page.js' %}"></script>
+
+    <script>
+      // Delayed initialization of ScrollReveal after the page has fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize ScrollReveal
+        ScrollReveal({
+          // Configure ScrollReveal options
+          distance: "60px",
+          duration: 2500,
+          delay: 200,
+        });
+
+        // Reveal elements with specified classes
+        ScrollReveal().reveal(".main-title, .section-title, .headline", {
+          delay: 200,
+          origin: "left",
+        });
+        ScrollReveal().reveal(
+          ".sec-01 .image, .info, .container, .form-overlay",
+          { delay: 300, origin: "right" }
+        );
+        ScrollReveal().reveal(".text-box, .button, .logos", {
+          delay: 500,
+          origin: "bottom",
+        });
+        ScrollReveal().reveal(".media-icons i", {
+          delay: 200,
+          origin: "bottom",
+          interval: 200,
+        });
+        ScrollReveal().reveal(
+          ".sec-02 .image, .sec-03 .image, .get-in-touch-container img",
+          { delay: 200, origin: "top" }
+        );
+        ScrollReveal().reveal(".media-info li,  .promo-statistics .stat-item", {
+          delay: 200,
+          origin: "left",
+          interval: 200,
+        });
+      });
+
+      // Error logging for ScrollReveal initialization
+      window.addEventListener("scrollRevealError", function (event) {
+        console.error("ScrollReveal error:", event.detail);
+      });
+
+      $(document).ready(function () {
+        $(".slider").slick({
+          // Slick carousel options here
+          dots: true, // Add dots for navigation
+          autoplay: true, // Autoplay the carousel
+          autoplaySpeed: 3000, // Autoplay speed in milliseconds (ms)
+          // Add more options as needed
+        });
+
+        // Initialize Slick carousel for services slide
+        $("#services-slide").slick({
+          dots: false, // No dots for this slide
+          autoplay: true,
+          autoplaySpeed: 3000,
+        });
+
+        // Initialize Slick carousel for expertise slide
+        $("#expertise-slide").slick({
+          dots: false, // No dots for this slide
+          autoplay: true,
+          autoplaySpeed: 3000,
+        });
+
+        // Initialize Slick carousel for testimonials and blogs slide
+        $(".slide:last-child").slick({
+          dots: false, // No dots for this slide
+          autoplay: true,
+          autoplaySpeed: 3000,
+        });
+      });
+
+      // Open social media links in new tabs
+      document.querySelectorAll(".social-icons a").forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          window.open(this.getAttribute("href"), "_blank");
+        });
+      });
+    </script>
+  </body>
+</html>

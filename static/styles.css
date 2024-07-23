@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+.nav{
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+  z-index: 100;
+}
+.nav-logo p{
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+.nav-menu ul{
+  display: flex;
+}
+.nav-menu ul li{
+  list-style-type: none;
+}
+.nav-menu ul li .link{
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 15px;
+  margin: 0 25px;
+}
+.link:hover, .active{
+  border-bottom: 2px solid #fff;
+  cursor:pointer;
+}
+.nav-button .btn{
+  width: 130px;
+  height: 40px;
+  font-weight: 500;
+  background: #3E8EDE;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+.btn:hover{
+  background: rgba(255, 255, 255, 0.3);
+  cursor:pointer;
+}
+.nav-logo {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.nav-logo img {
+  width: 70px; /* Adjust the width of the logo as needed */
+  margin-right: 10px; /* Add some spacing between the logo and text */
+  margin-top: -10px;
+}
+
+button {
+  border: none;
+  background: #3E8EDE;
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: .4s;
+  align-items: center;
+}
+
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+.container_ {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  width: 100%; /* Ensure image fills the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 50%; /* Take up half of the container width */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  left: 0;
+  padding-left: 50px; /* Adjust the padding as needed */
+}
+
+
+
+.first-set {
+  color: white; 
+  font-size: 50px; 
+  line-height: 1;
+}
+
+.floating-container{
+  position: fixed;
+  width : 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+  margin: 35px 25px;
+}
+
+
+
+
+section {
+    display: grid;
+    place-items: center;
+    flex-direction: column;
+    align-content: center;
+    min-height: 80vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+img{
+  z-index: 111;
+  position: center;
+  top: 0;
+  left: 0;
+  width: 300;
+  height: 300;
+  object-fit: cover;
+  border-radius:10px;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1500px;
+}
+
+.title{
+  font-size: 2em;
+  text-align: center;
+}
+
+.text-box {
+  z-index: 222;
+  background: rgba(225, 225, 225, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 20px; /* Adjust padding as needed */
+  border: 1px solid rgba(225, 225, 225, 0.1);
+  border-radius: 10px;
+  text-align: left; /* Center text horizontally */
+  margin: auto; /* Center text box horizontally */
+  max-width: 1000px; /* Set maximum width for the text box */
+  max-height: 800px;
+  justify-content: center;
+}
+.text {
+  flex: 1; /* Take up remaining space */
+  padding: 0 20px; /* Add padding to create space between image and text */
+}
+
+
+  
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  position: relative; /* Required for absolute positioning */
+}
+
+.footer-content {
+  position: relative; /* Change to relative positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo {
+  position: absolute;
+  top: 70px; /* Adjust the top position to move the company logo upwards */
+  left: 40%; /* Adjust the left position to center the logo horizontally */
+  transform: translateX(-50%);
+}
+
+.company-logo img {
+  width: 200px !important; /* Adjust size as needed */
+  height: auto !important; /* Maintain aspect ratio */
+}
+
+.company-details {
+  text-align: left;
+  margin-top: 80px; /* Adjust the margin-top as needed */
+}
+
+.social-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 10;
+  margin-left: 10px;
+  margin-top: -120px;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-media img {
+  width: 30px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 100px;
+}
+
+.slogan {
+  position: absolute; /* Position the slogan relative to the parent company-logo */
+  bottom: -50px; /* Adjust the distance from the logo */
+  left: 35%; /* Center the text horizontally */
+  transform: translateX(-15%); /* Center the text horizontally */
+  color: white;
+  font-weight: bold;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.terms-link {
+  text-decoration: none;
+  color: white; /* Choose your desired link color */
+  margin-right: 20px; /* Adjust the spacing between the link and the text */
+}
+
+.header-links {
+  margin-top:150px;
+  margin-left:450px;
+}
+
+

@@ -1,0 +1,325 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page Title and Description -->
+    <title>All Jobs</title>
+    <meta name="description" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static '/images/carrer-fav-icon.png' %}" type="image/gif" sizes="16x16">
+    
+    <link rel="stylesheet" href="{% static '/css/jobstyle2.css' %}">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,200&display=swap">
+    <link rel="stylesheet" href="{% static '/css/jobstyle.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Owl Carousel (if needed) -->
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    -->
+
+    <!-- Swiper (if needed) -->
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
+    -->
+
+    <!-- AOS Library (if needed) -->
+    <!--
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    -->
+
+    <!-- jQuery (ensure only one version is included) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Additional Scripts (optional) -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    -->
+</head>
+      
+<body>
+    {% if call == "yes" %}
+        <script>
+        console.log("AGYE")
+        window.alert("Application Submitted")</script>
+    {% endif %}
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="{% static 'images/company_logo.png' %}" alt="logo" />
+                <p style="font-size: 28px; font-weight: bold;">Meta Scifor Technologies</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="/" class="link" style="font-size: 20px; font-weight: bold;">Home</a></li>
+            <li><a href="/services"class="link" style="font-size: 20px; font-weight: bold;">Services</a></li>
+            <li><a href="/about-us" class="link" style="font-size: 20px; font-weight: bold;">About</a></li>
+            <li><a href="/case_study" class="link" style="font-size: 20px; font-weight: bold;">Case Studies</a></li>
+            <li><a href="/community" class="link" style="font-size: 20px; font-weight: bold;">Community</a></li>
+            <li><a href="#footer" class="link" style="font-size: 20px; font-weight: bold;">Contact</a></li>
+            <li><a href="#" class="link active" style="font-size: 20px; font-weight: bold;">Join Us</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+    <div class="all-jobs-heading"><b>Current</b> Openings</div>
+
+    <br />
+    <div class="outer-jobs">
+        <div id="allJobs"></div>
+        <div id="description"></div>
+
+        <div class="right-image">
+            <img src="{% static 'images/hiring.svg' %}" alt="image" />
+        </div>
+    </div>
+    <!-- <script src={% static 'js/fetchJobs.js' %}></script> -->
+    <script>
+        $(document).ready(() => {
+            $.ajax({
+                url: "/getAllJobs/",
+                type: "get",
+                success: function (response) {
+                    console.log(response);
+                    $("#allJobs").empty();
+                    for (let i in response) {
+                        console.log(response[i]);
+
+                        $("#allJobs").append(
+                            `<div class="jobs-card jobs-card-big">
+                                <div class="job-card-content">
+                                    
+                                        <div class="job-intro">
+                                            <span><h3>` +
+                            response[i].position +
+                            `</h3><img src="https://img.icons8.com/color/48/000000/group-skin-type-7.png"/></span>
+                                            <button class='more-btn more-btn-all' onclick=getJob(` +
+                            response[i].id +
+                            `)>Know More</button>
+                                            <span><p>` +
+                            response[i].location +
+                            `</p></span>
+                                            <span><p>` +
+                            response[i].jobType +
+                            `</p></span>
+                                        </div>
+                                        <div class="jobs-count">
+                                            <p>Openings: ` +
+                            response[i].openings +
+                            `</p>
+                                            <p>Experience: ` +
+                            response[i].experiences +
+                            `</p>
+                                        </div>
+                                        <span class='desc'>` +
+                            response[i].description +
+                            `
+                                        </span>
+                                    
+                                </div>
+                            </div>`
+                        );
+                    }
+                },
+            });
+        });
+    </script>
+    
+    <script>
+        function sleep(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+
+        function open() {
+            sleep(5000).then(() => {
+                cover.style.top = "-100vh";
+                coverDown.style.top = "-100vh";
+            });
+        }
+        function getJob(id) {
+            $.ajax({
+                url: "/job/?id=" + id,
+                type: "get",
+                success: function (response) {
+                    $("#allJobs").css({
+                        flex: ".4",
+                    });
+                    $("#description").css({
+                        flex: ".6",
+                    });
+                    $(".right-image").css({
+                        display: "none",
+                    });
+                    $(".desc").css({
+                        display: "none",
+                    });
+                    $(".jobs-card-big").css({
+                        width: "100%",
+                    });
+                    sleep(500).then(() => {
+                        $("#description").empty();
+                        $("#description").append(
+                            `<div class="jobs-card jobs-card-big job-desc" style="height:80vh; width:100%;">
+                            
+                            <div class='hover'>
+                                <button class="back-button-form" onclick=closeForm()>
+                                    Back
+                                </button>
+
+                                <div class="l-form">
+                                    <form action="/application/" method="post" class="form" id="form" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <h1 class="form_title">Upload Your Resume</h1>
+
+                                        <input type="text" class="JobID" name="id" value="`+ response.id +`"></input>
+                                        
+                                        <div class="form_div">
+                                            <input type="text" class="form_input" name="name" placeholder=" " required>
+                                        <label for="" class="form_label">Name</label>
+                                        </div>
+
+                                        <div class="form_div">
+                                            <input type="text" class="form_input" name="email" placeholder=" " required>
+                                            <label for="" class="form_label">Email</label>
+                                        </div>
+
+                                        <div class="form_div">
+                                            <input type="text" class="form_input" name="location" placeholder=" " required>
+                                            <label for="" class="form_label">Location</label>
+                                        </div>
+
+                                        <div class="form_div">
+                                            <input type="text" class="form_input" name="mobile" placeholder=" " required>
+                                            <label for="" class="form_label">Mobile Number</label>
+                                        </div>
+
+                                        <div class="form_div">
+                                            <input type="file" class="form_input_file" name="resume" placeholder=" " required>
+                                        </div>
+
+                                        <input type="submit" class="form_button" value="Submit">
+
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                <div class="job-card-content">
+                    
+                        <div class="job-intro">
+                            <span>
+                                <h3>` +
+                            response.position +
+                            `</h3><img
+                                    src="https://img.icons8.com/color/48/000000/group-skin-type-7.png" />
+                            </span>
+                            <button class="apply-now" onclick=openForm(` +
+                            response.id +
+                            `)>Apply Now</button>
+                            <span>
+                                <p>` +
+                            response.location +
+                            `</p>
+                            </span>
+                            <span>
+                                <p>` +
+                            response.jobType +
+                            `</p>
+                            </span>
+                        </div>
+                        <div class="jobs-count">
+                            <p>Openings: ` +
+                            response.openings +
+                            `</p>
+                            <p>Experience: ` +
+                            response.experiences +
+                            `</p>
+                        </div>
+                        <span>` +
+                            response.description +
+                            `</span>
+                        <div>
+                            ` +
+                            response.requirements +
+                            `    
+                        </div>
+                    
+                </div>
+            </div>`
+                        );
+                        $("#description").css({
+                            opacity: "1",
+                        });
+                    });
+                },
+            });
+        }
+
+        function openForm() {
+            $(".hover").css({
+                right: "0px",
+            });
+        }
+
+        function closeForm() {
+            $(".hover").css({
+                right: "-100%",
+            });
+        }
+    </script>
+
+
+    <!-- <script>
+        $("#form").on("submit", function(e) {
+        e.preventDefault();
+
+        _data1 = new FormData(this);
+        // _data["csrfmiddlewaretoken"] = $('input[name=csrfmiddlewaretoken]').val();
+        console.log(_data1);
+        console.log("AGEY");
+        
+        $.ajax({
+            url: "/application/",
+            type: "post",
+            data: _data1,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                console.log(response)
+                window.alert("Application Submitted")
+            }
+        });
+    });
+    </script> -->
+
+    <hr class="line">
+
+
+    <hr class="line">
+
+    {% include 'carrer/footer.html' %}
+
+
+    <!-- <script>
+        AOS.init({
+        //   offset: "200",
+        //   delay: "100", 
+        //   duration: "1000",
+        });
+      </script> -->
+</body>
+
+</html>

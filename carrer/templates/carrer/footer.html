@@ -1,0 +1,58 @@
+{% load static %}
+<footer>
+    <div id="footer" class="footer-content">
+        <div class="social-media">
+            <!-- Company logo -->
+            <a href="/" id="company-logo">
+            <img src="{% static 'images/scifor_logo.png' %}" alt="Logo" class="company-logo" style="width: 150px; height: auto;">
+            </a>
+            <p class="slogan" style="margin-bottom: 140px; margin-left:-45px;">Script. Sculpt. Socialize!</p>
+            
+            <div class="header-links">
+                <h3 style= "color: #3E8EDE; font-size: 25px; font-weight: bold;">LINKS</h3>
+                <h3 style="color: white; font-size: 15px; font-weight: bold;"><a href="#home" style="color: inherit; text-decoration: none;">HOME</a></h3>
+                <h3 style= "color: white; font-size: 15px; font-weight: bold;"><a href="#service" style="color: inherit; text-decoration: none;">SERVICES</h3>
+                <h3 style= "color: white; font-size: 15px; font-weight: bold;"><a href="#about" style="color: inherit; text-decoration: none;">ABOUT</h3>
+                <h3 style= "color: white; font-size: 15px; font-weight: bold;"><a href="#casestudies" style="color: inherit; text-decoration: none;">CASE STUDIES</h3>
+                <h3 style= "color: white; font-size: 15px; font-weight: bold;"><a href="#footer" style="color: inherit; text-decoration: none;">CONTACT</a></h3>
+                <h3 style= "color: white; font-size: 15px; font-weight: bold;"><a href="{% url 'jobs' %}" target="_blank" style="color: inherit; text-decoration: none;">JOIN US</h3>
+            </div>
+            
+            <!-- Social media icons -->
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg" target="_blank"><img src="{% static 'images/fb.png' %}" alt="Facebook"></a></li>
+                <li><a href="#"><img src="{% static 'images/twitter.png' %}" alt="Twitter"></a></li>
+                <li><a href="https://www.linkedin.com/company/scifortechnologies/" target="_blank"><img src="{% static 'images/linkedin.png' %}" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="{% static 'images/wp.png' %}" alt="Whatsapp"></a></li>
+                <li><a href="#"><img src="{% static 'images/youtube.png' %}" alt="Youtube"></a></li>
+                <li><a href="https://www.instagram.com/metascifortechnologies?igsh=MXVwbXdodm5pYWFqNA==" target="_blank"><img src="{% static 'images/instagram.png' %}" alt="LinkedIn"></a></li>
+                <!-- Add more social media icons as needed -->
+            </ul>
+        </div>
+        <div class="company-details">
+            <h2 style= "color: #3E8EDE; font-size: 40px; font-weight: bold; margin-left: 300px;">CONTACT US</h2>
+            <h3 style= "font-size: 30px; font-weight: bold; margin-left: 300px;">Meta Scifor Technologies</h3>
+            <p style= "margin-left: 300px;">Address: No.13-14, 2nd floor, Kothnur Main Rd</p>
+            <p style= "margin-left: 300px;">JP Nagar 7th Phase, Bengaluru</p>
+            <p style= "margin-left: 300px;">Karnataka 560078S</p>
+            <p style= "margin-left: 300px;">Email: info@scifortechnologies.com</p>
+            <p style= "margin-left: 300px;">Phone: +916235187933</p>
+        </div>
+   </div>
+    <div class="copyright">
+        <p style= "color: #3E8EDE; margin-left: 35px; font-size: 15px;">&copy; 2024 Meta Scifor Technologies. All Rights Reserved.</p>
+    </div>
+    <div class="left-section">
+        <a href="#" class="terms-link" style= "color: #3E8EDE; font-size: 15px;">Terms & Conditions</a>
+    </div>
+</footer>
+
+<script>
+// Open social media links in new tabs
+document.querySelectorAll('.social-icons a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        window.open(this.getAttribute('href'), '_blank');
+    });
+});
+</script>

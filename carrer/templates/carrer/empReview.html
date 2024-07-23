@@ -1,0 +1,98 @@
+{% load static %}
+
+<div class="emp-section">
+    <div data-aos="fade-right">
+        <div class="review-heading">
+            What Our <b>Employee Quote</b> 
+        </div>
+
+        <div class="review-text">
+            <p> Here's what our Employees Quote about Scifor
+            </p>
+        </div>
+    </div>
+
+  <div class="blog-slider" data-aos="fade-up">
+    <div class="blog-slider__wrp swiper-wrapper">
+      <div class="blog-slider__item swiper-slide">
+        <div class="blog-slider__img">
+          <img
+            src="{% static 'images/mac.jpeg' %}"
+            alt="emp"
+          />
+        </div>
+        <div class="blog-slider__content">
+          <span class="blog-slider__code">UI/UX Designer</span>
+          <div class="blog-slider__title">Hope Mikaelson</div>
+            <div class="blog-slider__text">
+                Its a pleasure to work with Scifor team. Its been more than 2 years, I have been working as UI/UX Designer and helping
+                the team to deliver Quality Products through the power of designing. The reason I love working here is the flexible 
+                work culture and supporting team-mates.
+            </div>
+          <!-- <a href="#" class="blog-slider__button">READ MORE</a> -->
+        </div>
+      </div>
+
+      <div class="blog-slider__item swiper-slide">
+        <div class="blog-slider__img">
+          <img
+            src="{% static 'images/emp2.jpeg' %}"
+            alt=""
+          />
+        </div>
+        <div class="blog-slider__content">
+          <span class="blog-slider__code">Data Engineer</span>
+          <div class="blog-slider__title">Hritik Gupta</div>
+          <div class="blog-slider__text">
+            The productive and fun workspace of Scifor is something which I loved. Its been 1 year I joined the team but I never felt
+            any work load from the company. Its one of the best team I have ever worked in my past 10 years of experience.
+          </div>
+          <!-- <a href="#" class="blog-slider__button">READ MORE</a> -->
+        </div>
+      </div>
+
+      <div class="blog-slider__item swiper-slide">
+        <div class="blog-slider__img">
+          <img
+            src="{% static 'images/emp1.jpeg' %}"
+            alt=""
+          />
+        </div>
+        <div class="blog-slider__content">
+          <span class="blog-slider__code">Business Analyst</span>
+          <div class="blog-slider__title">Allison Argent</div>
+          <div class="blog-slider__text">
+            Devtron is a place where you are valued for your work. Its been around 1.2 years I have joined Scifor and I can't imagine 
+            a single day when I faced a faliure alone. Its the best place I have ever worked at, where we face the faliures together and celebrate
+            the success together
+          </div>
+          <!-- <a href="#" class="blog-slider__button">READ MORE</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="blog-slider__pagination"></div>
+  </div>
+
+  <!-- <hr class="line"> -->
+</div>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"
+></script>
+
+<script>
+  var swiper = new Swiper(".blog-slider", {
+    spaceBetween: 30,
+    effect: "fade",
+    loop: true,
+    mousewheel: {
+      invert: false,
+    },
+    // autoHeight: true,
+    pagination: {
+      el: ".blog-slider__pagination",
+      clickable: true,
+    },
+  });
+</script>

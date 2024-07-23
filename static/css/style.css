@@ -1,0 +1,1086 @@
+body {
+  font-family: Nunito, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #d7e1ec;
+  color: #26282a;
+}
+/********************************* NavBar Section *******************************/
+.nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+    z-index: 100;
+  }
+  .nav-logo p{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .nav-menu ul{
+    display: flex;
+  }
+  .nav-menu ul li{
+    list-style-type: none;
+  }
+  .nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 10px;
+  }
+  .link:hover, .active{
+    border-bottom: 2px solid #fff;
+    cursor:pointer;
+  }
+  .nav-button .btn{
+    width: 130px;
+    height: 40px;
+    background: #3E8EDE;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+    font-size: 20px; 
+    font-weight: bold;
+  }
+  .btn:hover{
+    background: rgba(255, 255, 255, 0.3);
+    cursor:pointer;
+  }
+  
+  .nav-logo {
+      display: flex;
+      align-items: center; /* Align items vertically */
+  }
+  
+  .nav-logo img {
+      width: 70px; /* Adjust the width of the logo as needed */
+      margin-right: 10px; /* Add some spacing between the logo and text */
+      margin-top: -10px;
+  }
+ 
+
+button{
+    border: none;
+    background: #3E8EDE;;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition:.4s;
+}
+
+button:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+  /* Additional styles for slides */
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+  
+.slide img {
+    width: 100%; 
+    height: 850px; /* Set a fixed height for all images (adjust as needed) */
+    object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire container */
+}
+  
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+}
+  
+.big-text {
+    color: white; 
+    font-size: 30px; 
+    font-weight: bold;
+}
+
+.small-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    }
+
+@media only screen and (max-width: 540px){
+  .left-content{
+    width: 90vw !important;
+    padding-left: 0px !important;
+    padding-top: 0px !important;
+  }
+  /* .devtron-nav{
+    display: none;
+  } */
+  header .options ul{
+    display: none;
+  }
+}
+
+/****************************** Landing-Section *********************************/
+.landing-page{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.left-content{
+  width: 50vw;
+  width: 48vw;
+  padding-left: 10vw;
+  padding-top: 20%;
+}
+
+.left-half{
+  /* position: relative; */
+  height: 100%;
+}
+.left-half{
+  content: "";
+  position: absolute;
+  /* height: 100%; */
+  width: 70%;
+  top: 0;
+  left: 0;
+  /* background: linear-gradient(135deg, #253898, #5737D6); */
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+
+  border-bottom-right-radius: 200px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.left-half-heading{
+  font-size: 3rem;
+  /* font-weight: 500; */
+  color: #fff;
+  margin-bottom: 2vh;
+}
+.left-half-text{
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+
+}
+.right-card{
+  z-index: 1;
+  width: 42vw;
+  height: 52vh;
+  position: absolute;
+  margin-top: 22vh;
+  margin-left: 50vw;
+}
+.right-card img{
+  height: 100%;
+  /* width: 100%; */
+  object-fit: contain;
+  float: right;
+  border-top-left-radius: 200px;
+  box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 1%), 0 6.7px 5.3px rgb(0 0 0 / 1%), 
+  0 12.5px 10px rgb(0 0 0 / 2%), 0 22.3px 17.9px rgb(0 0 0 / 3%), 
+  0 41.8px 33.4px rgb(0 0 0 / 4%), 0 100px 80px rgb(0 0 0 / 5%);
+}
+
+@media only screen  and (max-width: 540px){
+  .left-half{
+    width: 100%;
+  }
+  
+  .left-half-heading {
+    font-size: 1rem;
+    color: #fff;
+    padding-top: 56vh;
+    padding-left: 2rem;
+    margin-bottom: 0;
+  }
+
+  .left-half-text{
+    font-size: 1.4rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .right-card{
+    z-index: 1;
+    width: 90%;
+    height: 38%;
+    position: absolute;
+    margin-top: 14vh;
+    margin-left: 1rem;
+  }
+
+  .right-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    float: right;
+    border-top-left-radius: 150px;
+    box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 1%), 0 6.7px 5.3px rgb(0 0 0 / 1%), 
+                0 12.5px 10px rgb(0 0 0 / 2%), 0 22.3px 17.9px rgb(0 0 0 / 3%), 
+                0 41.8px 33.4px rgb(0 0 0 / 4%), 0 100px 80px rgb(0 0 0 / 5%);
+  }
+
+}
+
+/************************************* Vacancies at Scifor **************************/
+/* General styling for job listings container */
+.jobs {
+    height: auto; /* Adjust height as needed */
+    width: 100%;
+    padding: 4% 10%; /* Top and bottom padding: 4%, Left and right padding: 10% */
+}
+
+/* Styling for the heading "Open to Hire For" */
+.jobs-heading {
+    font-size: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+/* Styling for upper and lower job card sections */
+.jobs-upper,
+.jobs-lower {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    margin-top: 20px;
+}
+
+/* Styling for individual job cards */
+.jobs-card {
+    width: 48%; /* Adjust width for responsiveness */
+    border: 1px solid #7b7b7b;
+    border-radius: 10px;
+    padding: 2%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease; /* Smooth transition on hover */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+    /* Gradient background from purple to pink */
+    background: linear-gradient(to right, #80FFDB, #5390D9);
+}
+
+.jobs-card:hover {
+    cursor: pointer;
+    border-color: #062744; /* Change border color on hover */
+    transform: rotateY(20deg) scale(1.20); /* Apply rotation on hover */
+    /*transform: translateY(-5px); /* Move card slightly upwards on hover */
+}
+
+/* Styling for job titles within job cards */
+.job-intro h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Styling for job details and icons */
+.job-intro span {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #333; /* Adjust text color */
+}
+
+.job-intro span img {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 10px;
+}
+
+/* Styling for 'More Jobs' button */
+.more-btn {
+    text-align: center;
+    padding: 12px 24px;
+    margin: 2rem 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #23a6d5;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.more-btn:hover {
+    background-color: #23d5ab;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 768px) {
+    .jobs-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/*
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+ @-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+} */
+/********************************** Why Scifor Section ******************************/
+.why{
+  height: fit-content;
+  margin-top: 6vh;
+  width: 100vw;
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite; */
+  color: #000;
+  border-bottom-right-radius: 200px;
+  border-top-right-radius: 200px;
+  /* Gradient background with a semi-transparent overlay */
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 255, 0, 0.5));
+}
+
+/* @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+.why-heading{
+  font-size: 2rem;
+  padding-top: 4rem;
+  padding-left: 10%;
+  padding-bottom: 1vh;
+  /* color: #7b7992; */
+  /* font-weight: 500; */
+}
+
+.why-text p{
+  font-size: 1.2rem;
+  padding-bottom: 4rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.why-values-upper, .why-values-lower{
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-values-lower{
+  margin-top: 10vh;
+  padding-bottom: 10vh;
+  /* margin-bottom: 10vh; */
+}
+
+.left-data, .right-data{
+  /* max-width: 457.136px; */
+  width: 36.571vw;
+  border-image-slice: 1 100%;
+  border-left: 2px solid;
+  border-right: 0;
+  padding-left: 16px;
+  border-image-source: linear-gradient(#23a6d5, #23d5ab);
+  /* border-image-source: linear-gradient(#23a6d5, #e73c7e); */
+}
+.location-title{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.line{
+  width: 80vw; 
+  margin-top: 10vh;
+}
+
+@media only screen and (max-width: 540px){
+  .why{
+    height: 100%;
+  }
+  .why-heading{
+    font-size: 1rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+
+  .why-text p{
+    font-size: 1.2rem;
+    width: 90vw;
+    padding-left:2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+  .why-values-upper, .why-values-lower{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: block;
+  }
+  .left-data, .right-data{
+    width: 80vw;
+  }
+  .why-values-lower{
+    margin-top: 0px;
+  }
+  .line{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+}
+/********************************** Why Devtron Section *******************************/
+
+
+/********************************* Employee Review Section ****************************/
+.emp-section{
+  height: fit-content;
+  padding-bottom: 10vh;
+  /* Linear gradient from blue to green */
+  background: linear-gradient(to right, #3498db, #2ecc71);
+}
+.review-heading{
+  font-size: 2rem;
+  padding-top: 4rem;
+  padding-left: 10%;
+  /* color: #7b7992; */
+  /* font-weight: 500; */
+}
+.review-text p{
+  font-size: 1.2rem;
+  padding-bottom: 4rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media screen and (max-width: 540px){
+  .emp-section{
+    padding-bottom: 0;
+  }
+  .review-heading{
+    font-size: 1rem;
+    padding-left: 2rem;
+  }
+
+  .review-text p{
+    font-size: 1.4rem;
+    padding-left:2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.blog-slider {
+  width: 95%;
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 25px;
+  border-radius: 25px;
+  height: 400px;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 992px) {
+  .blog-slider {
+    max-width: 680px;
+    height: 400px;
+ }
+}
+@media screen and (max-width: 768px) {
+  .blog-slider {
+    min-height: 500px;
+    height: auto;
+    margin: 180px auto;
+ }
+}
+@media screen and (max-height: 500px) and (min-width: 992px) {
+  .blog-slider {
+    height: 350px;
+ }
+}
+
+.blog-slider__item {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .blog-slider__item {
+    flex-direction: column;
+ }
+}
+.blog-slider__item.swiper-slide-active .blog-slider__img img {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > * {
+  opacity: 1;
+  transform: none;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(1) {
+  transition-delay: 0.3s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(4) {
+  transition-delay: 0.6s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(5) {
+  transition-delay: 0.7s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(6) {
+  transition-delay: 0.8s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(7) {
+  transition-delay: 0.9s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(8) {
+  transition-delay: 1s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(9) {
+  transition-delay: 1.1s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(10) {
+  transition-delay: 1.2s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(11) {
+  transition-delay: 1.3s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(12) {
+  transition-delay: 1.4s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(13) {
+  transition-delay: 1.5s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(14) {
+  transition-delay: 1.6s;
+}
+.blog-slider__item.swiper-slide-active .blog-slider__content > *:nth-child(15) {
+  transition-delay: 1.7s;
+}
+.blog-slider__img {
+  width: 300px;
+  flex-shrink: 0;
+  height: 300px;
+  background-image: linear-gradient(147deg, #253898 0%, #5737D6 74%);
+  /* box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2); */
+  border-radius: 20px;
+  transform: translateX(-80px);
+  overflow: hidden;
+}
+.blog-slider__img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.blog-slider__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-slider__img {
+    transform: translateY(-50%);
+    width: 90%;
+ }
+}
+@media screen and (max-width: 576px) {
+  .blog-slider__img {
+    width: 95%;
+ }
+}
+@media screen and (max-height: 500px) and (min-width: 992px) {
+  .blog-slider__img {
+    height: 270px;
+ }
+}
+.blog-slider__content {
+  padding-right: 25px;
+}
+@media screen and (max-width: 768px) {
+  .blog-slider__content {
+    margin-top: -80px;
+    text-align: center;
+    padding: 0 30px;
+ }
+}
+@media screen and (max-width: 576px) {
+  .blog-slider__content {
+    padding: 0;
+ }
+}
+.blog-slider__content > * {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.4s;
+}
+.blog-slider__code {
+  color: #7b7992;
+  margin-bottom: 15px;
+  display: block;
+  font-weight: 500;
+}
+.blog-slider__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0d0925;
+  margin-bottom: 20px;
+}
+.blog-slider__text {
+  color: #4e4a67;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+}
+/* .blog-slider__button {
+  display: inline-flex;
+  background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%);
+  padding: 15px 35px;
+  border-radius: 50px;
+  color: #fff;
+  box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
+  text-decoration: none;
+  font-weight: 500;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 576px) {
+  .blog-slider__button {
+    width: 100%;
+ }
+} */
+
+.blog-slider .swiper-container-horizontal > .swiper-pagination-bullets, .blog-slider .swiper-pagination-custom, .blog-slider .swiper-pagination-fraction {
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+.blog-slider__pagination {
+  position: absolute;
+  z-index: 21;
+  right: 20px;
+  width: 11px !important;
+  text-align: center;
+  left: auto !important;
+  top: 50%;
+  bottom: auto !important;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 768px) {
+  .blog-slider__pagination {
+    transform: translateX(-50%);
+    left: 50% !important;
+    top: 205px;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+}
+.blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-slider__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 5px;
+ }
+}
+.blog-slider__pagination .swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  display: block;
+  border-radius: 10px;
+  background: #062744;
+  opacity: 0.2;
+  transition: all 0.3s;
+}
+.blog-slider__pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #253898; 
+  height: 30px;
+  box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
+}
+@media screen and (max-width: 768px) {
+  .blog-slider__pagination .swiper-pagination-bullet-active {
+    height: 11px;
+    width: 30px;
+ }
+}
+
+/********************************* Employee Review Section END ****************************/
+
+/************************************* Gallery Section END ********************************/
+.instagram .instagram-heading {
+  font-size: 2rem;
+  padding-top: 4rem;
+  padding-left: 10%;
+  padding-bottom: 0.4vh;
+  /* color: #7b7992; */
+  /* font-weight: 500; */
+}
+
+.instagram .insta-text p{
+  font-size: 1.2rem;
+  padding-bottom: 4rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.instagram .images {
+  width: 80vw;
+  height: 76vh;
+  /* border-radius: 10px; */
+  margin-left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  /* display: grid; */
+  grid-template-areas:
+    "img0 img1 img2 img2"
+    "img4 img1 img9 img6"
+    "img7 img7 img5 img6";
+  /* grid-gap: 1px; */
+  cursor: pointer;
+}
+
+@media screen and (max-width: 540px){
+
+  .instagram .instagram-heading{
+    font-size: 1rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+
+  .instagram .insta-text p{
+    font-size: 1.4rem;
+    padding-left:2rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .instagram .images{
+    grid-template-areas:
+      "img0 img0"
+      "img4 img1"
+      "img5 img1";
+  }
+  .instagram {
+    margin-bottom: 4vh;
+  }
+
+  .instagram .images {
+    width: 90vw;
+    height: 90vh;
+  }
+  .img-3 {
+    display: none;
+  }
+  .img-6 {
+    display: none;
+  }
+  .img-2 {
+    display: none;
+  }
+  .img-7 {
+    display: none;
+  }
+  .img-8 {
+    display: none;
+  }
+  .img-9 {
+    display: none;
+  }
+
+  .hovered {
+    display: none;
+  }
+}
+
+.images > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.images img {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.1);
+  transition: all 500ms;
+}
+
+.img-0 {
+  grid-area: img0;
+}
+.img-1 {
+  grid-area: img1;
+}
+.img-2 {
+  grid-area: img2;
+}
+.img-3 {
+  /* grid-area: img3; */
+  display: none;
+}
+.img-4 {
+  grid-area: img4;
+}
+.img-5 {
+  grid-area: img5;
+}
+.img-6 {
+  grid-area: img6;
+}
+.img-7 {
+  grid-area: img7;
+}
+.img-8 {
+  /* grid-area: img8; */
+  display: none;
+}
+.img-9 {
+  grid-area: img9;
+}
+
+.hovered {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 1;
+  transition: all 500ms;
+  transform: translate(-100%, 0);
+  opacity: 0.5;
+}
+
+.hovered h1 {
+  position: absolute;
+  bottom: 0;
+  padding-left: 45px;
+  color: #fff;
+  opacity: 1;
+}
+
+.images > div:hover .hovered {
+  transform: translate(0, 0);
+}
+
+.images > div:hover img {
+  transform: scale(1.3);
+}
+/**************************************** Footer *****************************************/
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    position: relative; /* Required for absolute positioning */
+}
+
+.footer-content {
+    position: relative; /* Change to relative positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-logo {
+    position: absolute;
+    top: 70px; /* Adjust the top position to move the company logo upwards */
+    left: 40%; /* Adjust the left position to center the logo horizontally */
+    transform: translateX(-50%);
+}
+
+.company-logo img {
+    width: 200px !important; /* Adjust size as needed */
+    height: auto !important; /* Maintain aspect ratio */
+}
+
+.company-details {
+    text-align: left;
+    margin-top: 80px; /* Adjust the margin-top as needed */
+}
+
+.social-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 10;
+    margin-left: 10px;
+    margin-top: -120px;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 100px;
+}
+
+.slogan {
+    position: absolute; /* Position the slogan relative to the parent company-logo */
+    bottom: -40px; /* Adjust the distance from the logo */
+    left: 35%; /* Center the text horizontally */
+    transform: translateX(-15%); /* Center the text horizontally */
+    color: white;
+    font-weight: bold;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    margin-left: 600px;
+}
+
+.terms-link {
+    text-decoration: none;
+    color: white; /* Choose your desired link color */
+    margin-right: 20px; /* Adjust the spacing between the link and the text */
+}
+
+.header-links {
+    margin-top:150px;
+    margin-left:450px;
+}
+/*************************************** MEDIA QUERY **************************************/
+
+@media only screen and (max-width: 992px) {
+  .header-inner {
+    padding: 10px 0px !important;
+  }
+
+  .nav-item .nav-link {
+    color: white !important;
+    margin-left: 40px;
+    padding: 20px 20px;
+  }
+
+  .github-star{
+    margin-left: 32px;
+    color: #fff;
+    border-color: #fff;
+  }
+  .github-star-count{
+    border-color: #fff;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow: auto;
+    height: 100%;
+    background-color: #110d23;
+    width: 60%;
+    transform: translatex(-100%);
+    transition: all ease 0.29s;
+  }
+
+  .intro-section:before {
+    height: 100%;
+    width: 100% !important;
+    background: #352961;
+    border-bottom-right-radius: 0px !important;
+  }
+
+  .intro-section {
+    padding-top: 90px !important;
+  }
+}
+
+.open-nav {
+  transform: translatex(0%) !important;
+}
+
+
+
+
+
+
+

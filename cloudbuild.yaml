@@ -1,0 +1,28 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - '-t'
+      - 'gcr.io/terraform-poc-410807/career-page.git:latest'
+      - ./
+    id: Build Stage
+  - name: gcr.io/cloud-builders/gcloud
+    args:
+      - container
+      - clusters
+      - get-credentials
+      - terraform-poc-410807-gke
+      - '--region'
+      - us-central1
+    id: Deployment Prep
+  - name: gcr.io/cloud-builders/gke-deploy
+    args:
+      - apply
+      - '--filename'
+      - ./kubernetes/prod
+      - '--cluster'
+      - terraform-poc-410807-gke
+      - '--location'
+      - us-central1
+    id: Deploy  
+timeout: 600s

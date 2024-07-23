@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Software Development</title> 
+        
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="{% static 'company_logo.png' %}" alt="Company Logo">
+                <p style="font-size: 28px; font-weight: bold;">Meta Scifor Technologies</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a onclick="window.location.href='/'" class="link ">Home</a></li>
+                    <li><a onclick="window.location.href='/services'" class="link active">Services</a></li>
+                    <li><a onclick="window.location.href='/about-us'" class="link">About</a></li>
+                    <li><a onclick="window.location.href='/case_study'" class="link">Case Studies</a></li>
+                    <li><a href="#footer" class="link">Contact</a></li>
+                    <li><a href="/carrer" class="link">Join Us</a></li>
+                </ul> 
+            </div>
+
+        </nav>
+
+
+
+
+
+
+        <div class="container_">
+            <img src="{% static 'softback.jpg' %}" height="700" width="100%">
+            <div class="overlay left">
+                <h2 class="first-set" id="service_name" style="font-weight: bold;">SOFTWARE DEVELOPMENT</h2>
+            </div>
+        </div>
+
+        <section class="hidden">
+            <div class="container">
+                <img src="{% static 'soft5.jpg' %}" width="500" height="500">
+                <div class="text">
+                    <h1 id="why_title" class="title_" style="font-weight: bold;"></h1>
+                    <p id="service_description" style="text-align: justify;"></p>
+                    <p>Software development is a crucial aspect of any modern company's operations, and showcasing it on a company website serves multiple purposes. Firstly, it provides transparency to potential clients or partners about the company's capabilities and expertise in creating custom solutions tailored to their needs. By highlighting past projects, case studies, and client testimonials, the website demonstrates the company's track record of successful software development initiatives, instilling confidence in its abilities. Additionally, featuring software development services on the website attracts talent by showcasing the company's commitment to innovation and cutting-edge technology. This can help in attracting skilled professionals who are passionate about contributing to impactful projects. Ultimately, integrating software development details into the company website not only serves as a marketing tool but also as a means to establish credibility, attract talent, and foster client trust in the company's capabilities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hidden" >
+            <div class="text-box">
+            <h2 class="title" style="font-weight: bold;"> OVERVIEW</h2>
+            <p id="service_overview" style="text-align: justify;"></p>
+                <p>At SciFor, we pride ourselves on our comprehensive approach to software development, driven by innovation, collaboration, and a deep understanding of our client's needs. Our seasoned team of developers, engineers, and designers work in tandem to create bespoke solutions that address the unique challenges and objectives of each project. From concept to deployment, we leverage cutting-edge technologies and industry best practices to deliver high-quality, scalable software solutions that empower businesses to thrive in today's digital landscape. Our software development process begins with a thorough analysis of our client's requirements, ensuring a clear understanding of project goals, timelines, and budget constraints. We then proceed to design a robust architecture and user-centric interface, prioritizing usability, accessibility, and scalability. Development is carried out using agile methodologies, allowing for flexibility, iterative improvements, and rapid response to changing requirements. Quality assurance is paramount throughout the development lifecycle, with rigorous testing procedures implemented to identify and address any issues or bugs. Our commitment to excellence extends beyond the initial launch, as we provide ongoing support and maintenance to ensure optimal performance and reliability.With a proven track record of successful projects across various industries, including healthcare, finance, e-commerce, and more, SciFor is poised to be your trusted partner in software development. Whether you're looking to streamline internal processes, enhance customer experiences, or drive business growth, we have the expertise and dedication to bring your vision to life. Let us help you unlock the full potential of technology and propel your business to new heights.</p>
+            </div>
+        </section>
+        
+
+        <section class="hidden">
+            <div class="container">
+               <div class="text"> 
+                    <h2 class="title_" style="font-weight: bold;">EXPERTISE AND SOLUTIONS</h2>
+                                   <p>We offer custom software development services to help businesses streamline their operations, improve efficiency, and achieve their objectives. Whether it's developing a bespoke enterprise application, CRM system, or workflow automation solution, we leverage our expertise to deliver tailored software solutions that align with our clients' business goals. We specialize in integrating disparate systems, applications, and data sources to enable seamless communication and data exchange within organizations. Whether it's integrating third-party APIs, connecting legacy systems with modern platforms, or implementing middleware solutions, we facilitate smooth interoperability to enhance efficiency and productivity. As pioneers in blockchain technology, we offer blockchain development services to help businesses leverage the benefits of decentralized networks, smart contracts, and secure transactions. Whether it's developing custom blockchain solutions, decentralized applications (DApps), or implementing blockchain-based authentication and identity management systems, we empower businesses to embrace the future of secure and transparent transactions.</p>
+
+                    <ul id="service_expertise" style="text-align: justify;"></ul>
+                </div>
+                <img src="{% static 'sofdev.jpg' %}" width="500" height="500">
+            </div>
+        </section>
+
+     
+
+        <footer>
+            <div id="footer" class="footer-content">
+                <div class="social-media">
+                    <!-- Company logo -->
+                    <a href="/" id="company-logo">
+                    <img src="{% static 'emplo.png' %}" alt="Logo" class="company-logo" style="width: 150px; height: auto;">
+                    </a>
+                    <p class="slogan" style="margin-bottom: 140px; margin-left:-45px;">Script. Sculpt. Socialize!</p>
+                    
+                    <div class="header-links">
+                        <h3 style= "color: #3E8EDE; font-size: 25px; font-weight: bold;">LINKS</h3>
+                        <h3 style="font-size: 15px; font-weight: bold;cursor: pointer;"><a href="/" style="color: inherit; text-decoration: none;">HOME</a></h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold;cursor: pointer;"><a onclick="window.location.href='/services'" target="_blank" style="color: inherit; text-decoration: none;">SERVICES</h3>
+                        <h3 style= "font-size: 15px; font-weight: bold;cursor: pointer;"><a href="About.html" target="_blank" style="color: inherit; text-decoration: none;">ABOUT</h3>
+                        <h3 style= "color: white; font-size: 15px; font-weight: bold;cursor: pointer;"><a onclick="window.location.href='/case_study'" target="_blank" style="color: inherit; text-decoration: none;">CASE STUDIES</a></li>                            
+                        <h3 style= "font-size: 15px; font-weight: bold;cursor: pointer;"><a href="#footer" style="color: inherit; text-decoration: none;">CONTACT</a></h3>
+                        <h3 style= "font-size: 15px; font-weight: bold;cursor: pointer;"><a href="JoinUs.html" target="_blank" style="color: inherit; text-decoration: none;">JOIN US</h3>
+                    </div>
+                    
+                     <!-- Social media icons -->
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/share/togajFtqxTBofCCP/?mibextid=qi2Omg" target="_blank"><img src="{% static 'fb.png' %}" alt="Facebook"></a></li>
+                <li><a href="#"><img src="{% static 'twitter.png') }}" alt="Twitter"></a></li>
+                <li><a href="https://www.linkedin.com/company/scifortechnologies/" target="_blank"><img src="{% static 'linkedin.png' %}" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="{% static 'wp.png' %}" alt="Whatsapp"></a></li>
+                <li><a href="#"><img src="{% static 'youtube.png' %}" alt="Youtube"></a></li>
+                <li><a href="https://www.instagram.com/metascifortechnologies?igsh=MXVwbXdodm5pYWFqNA==" target="_blank"><img src="{% static 'instagram.png' %}" alt="LinkedIn"></a></li>
+                <!-- Add more social media icons as needed -->
+            </ul>
+        </div>
+                <div class="company-details">
+                    <h2 style= "color: #3E8EDE; font-size: 40px; font-weight: bold; margin-left: 300px;">CONTACT US</h2>
+                    <h3 style= "font-size: 30px; font-weight: bold; margin-left: 300px;">Meta Scifor Technologies</h3>
+                    <p style= "margin-left: 300px;">Address: No.13-14, 2nd floor, Kothnur Main Rd</p>
+                    <p style= "margin-left: 300px;">JP Nagar 7th Phase, Bengaluru</p>
+                    <p style= "margin-left: 300px;">Karnataka 560078S</p>
+                    <p style= "margin-left: 300px;">Email: info@scifortechnologies.com</p>
+                    <p style= "margin-left: 300px;">Phone: +916235187933</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p style= "color: #3E8EDE; margin-left: 70px; font-size: 15px;">&copy; 2024 Meta Scifor Technologies. All Rights Reserved.</p>
+            </div>
+            <div class="copyright">
+                <a href="#" class="terms-link" style= "color: #3E8EDE; font-size: 15px;">Terms & Conditions</a>
+            </div>
+        </footer>
+
+        
+        <script src="/static/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  
+    </body>
+</html>

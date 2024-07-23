@@ -1,0 +1,148 @@
+{% load static %}
+
+<style>
+
+    .about-company-wrapper{
+    box-sizing: border-box;
+}
+.about-company-container{
+    width: 100vw;
+    height: 70%;
+    background-color: #13293D;
+    display: flex;
+}
+@media (max-width : 600px) {
+    .about-company-container{
+        height: 58vh;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+/* About Scifor Image Section */
+
+.about-company-image-container{
+    width: 50vw;
+    height: 35vw;
+    position: relative;
+    z-index: 1;
+}
+
+.about-company-image{
+    width: 100%;
+    height: 100%;
+}
+.about-company-image-backgound{
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    border: 10px solid black;
+    z-index: -1;
+    overflow: hidden;
+ }
+
+.vedio-cover{
+    background-color: rgb(170, 231, 255);
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    filter: opacity(50%);
+}
+
+.about-company-image-backgound-vedio{
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    z-index: -1;
+}
+
+/* About Scifor Image Section Media Query*/
+
+@media (max-width : 600px) {
+    .about-company-image-container{
+        width: 100vw;
+        height: 45rem;
+    }
+    .about-company-image{
+        width: 100%;
+        height: 17rem;
+    }
+    .about-company-image-backgound{
+        width: 16rem !important;
+        height: 10rem !important;
+        border: 8px solid black;
+        top: 10% !important;
+        left: 20% !important;
+     }
+     .about-company-image-backgound-vedio{
+        width: 26rem;
+        position: absolute;
+    }
+  }
+
+/* About Scifor Description Section */
+
+.about-company-description-container{
+    width: 50vw;
+    height: 100%;
+    text-align: center;
+}
+.about-company-heading{
+margin-top: 10%;
+font-size: 3.5vw;
+color: beige;
+}
+.about-company-description{
+padding: 2rem 3.5rem;
+font-size: 1.5vw;
+text-align: justify;
+color: white;
+}
+
+/* About Scifor Description Media Query*/
+
+@media (max-width : 600px) {
+    .about-company-description-container{
+        width: 100vw;
+        height: 100%;
+    }
+    .about-company-heading{
+        margin-top: 0rem !important;
+        font-size: 1.5rem !important;
+        color: beige;
+    }
+    .about-company-description{
+        margin-left: 0rem !important;
+        padding: 2rem 2rem !important;
+        font-size: 3vw !important;
+    }
+  }
+@media (max-width : 1410px) {
+    .about-company-heading{
+        font-size: 3.5vw;
+        color: beige;
+        }
+    .about-company-description{
+        font-size: 2vw;
+        }
+}
+
+</style>
+
+<div class="about-company-wrapper">
+    <div class="about-company-container">
+        <div class="about-company-image-container">
+            <img class="about-company-image" src="{% static 'aboutus.png' %}" alt="About Us" />
+
+        </div>
+        <div class="about-company-description-container">
+            <h1 class="about-company-heading">About Meta Scifor Technologies</h1>
+            <p class="about-company-description">
+                At Meta Scifor Technologies, we are a leading provider of comprehensive digital solutions tailored to meet the evolving needs of businesses worldwide. With a team of skilled professionals and a commitment to excellence, we offer a wide range of services to help our clients thrive in the digital landscape.
+            </p>
+        </div>
+    </div>
+</div>
